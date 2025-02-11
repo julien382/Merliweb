@@ -1,0 +1,54 @@
+@use '../../styles/index' as *;
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: $color-black;
+}
+
+.nameLogoFooter {
+    font-size: $font-size-xl;
+    color: $color-white;
+    font-family: $secondary-font;
+}
+
+.containerHoraires, .containerAdresse, .containerContact, .containerCopyright {
+    margin-top: 2rem;
+}
+
+.titleHoraires, .titleAdresse {
+    font-size: $font-size-xl;
+    font-family: $secondary-font;
+    color: $color-white;
+}
+
+.horaires, .adresse {
+    font-size: $font-size-md;
+    color: $color-white;
+}
+
+.containerContact {
+    display: flex;
+    gap: 1rem;
+}
+
+.containerContact img {
+    width: 35px;
+    height: 35px;
+    background-color: $color-black;
+    border-radius: 25%;
+    padding: 8px;
+    object-fit: contain;
+}
+
+.containerCopyright {
+    font-weight: $font-weight-regular;
+}
+
+.copyright {
+    color: $color-white;
+}

@@ -1,34 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+import Header from "./components/Header/Header";
+import MainPage from "./pages/MainPage/MainPage";
+import ErrorPage from "./pages/Error/ErrorPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const location = useLocation(); // Récupère les infos sur la route actuelle
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Définit le défilement en haut de la page
+  }, [location.pathname]); // S'exécute chaque fois que l'URL change
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div id="app">
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/*" element={<ErrorPage />} />
+        </Routes>
+      </main>
+      <Footer />
+
+    </div>
+  );
 }
 
-export default App
+export default App;
