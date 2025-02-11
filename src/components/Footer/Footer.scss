@@ -7,48 +7,38 @@ footer {
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    background-color: $color-black;
+    background-color: $color-gray-light;
+    color: $color-blue-dark;
+    font-size: $font-size-md;
+    font-weight: $font-weight-light;
 }
 
-.nameLogoFooter {
-    font-size: $font-size-xl;
-    color: $color-white;
-    font-family: $secondary-font;
+.FooterNameType{
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.5rem;
 }
 
-.containerHoraires, .containerAdresse, .containerContact, .containerCopyright {
+.containerContact, .containerMedia, .containerLocalisation, .containerCopyright {
     margin-top: 2rem;
 }
 
-.titleHoraires, .titleAdresse {
-    font-size: $font-size-xl;
-    font-family: $secondary-font;
-    color: $color-white;
-}
-
-.horaires, .adresse {
-    font-size: $font-size-md;
-    color: $color-white;
-}
-
-.containerContact {
+.containerEntreprise, .containerContact, .containerMedia, .containerLocalisation, .containerCopyright{
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
-.containerContact img {
-    width: 35px;
-    height: 35px;
-    background-color: $color-black;
-    border-radius: 25%;
-    padding: 8px;
-    object-fit: contain;
+.containerContact a, .containerMedia a, .containerLocalisation a{
+    color: $color-blue-dark;
+    font-weight: $font-weight-light;
 }
 
-.containerCopyright {
-    font-weight: $font-weight-regular;
+.containerCopyright{
+    gap: 0.23em;
 }
 
-.copyright {
-    color: $color-white;
+.copyrightLink{
+    color: $color-blue-dark;
+    font-weight: $font-weight-light;
 }

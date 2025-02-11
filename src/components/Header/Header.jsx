@@ -14,7 +14,8 @@ const Header = () => {
                 </Link>
             )}
             <Link to="/">
-                <h1 className='nameLogo'>ohmylunch</h1>
+                <img src={logo} className='arrowLeft' alt='arrowLeft' />
+                <h1 className='nameLogo'>Merliweb</h1>
             </Link>
         </header>
     )

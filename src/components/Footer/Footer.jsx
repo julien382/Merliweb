@@ -1,5 +1,4 @@
 import './Footer.scss'
-import logo from '../../assets/logo/Merliweb.svg';
 
 import { Link } from "react-router-dom";
 
@@ -7,28 +6,62 @@ const Footer = () => {
 
     return (
         <footer>
-            <h1 className='nameLogoFooter'>ohmylunch</h1>
+            <div className='containerEntreprise'>
+                <h1 className='FooterNameType'>Merliweb</h1>
+                <p>Agence de Création</p>
+                <p>Digitales </p>
+            </div>
+
             <div className='containerContact'>
+                <p className='FooterNameType'>Contact</p>
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <img src={logo} alt="Facebook" />
+                    <p>Merliweb@*****.**</p>
                 </Link>
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <img src={logo} alt="Instagram" />
-                </Link>
-                <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <img src={logo} alt="Mail" />
-                </Link>
-                <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <img src={logo} alt="Tripadvisor" />
+                    <p>06 ** ** ** **</p>
                 </Link>
             </div>
-            <div className='containerCopyright'>
-                <p className='copyright'>Copyright © 2025 ohmylunch</p>
+
+            <div className='containerMedia'>
+                <p className='FooterNameType'>Social Media</p>
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <p className='copyright'>Site web créé par Julien Hermain</p>
+                    <p>LinkedIn</p>
+                </Link>
+                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <p>Facebook</p>
+                </Link>
+                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <p>Instagram</p>
+                </Link>
+                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <p>TikTok</p>
+                </Link>
+            </div>
+
+            <div className='containerLocalisation'>
+                <p className='FooterNameType'>Localisation</p>
+                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <p>Hauts-De-France</p>
+                </Link>
+                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <p>Merlimont</p>
+                </Link>
+                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <p>Berck</p>
+                </Link>
+                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <p>Le Touquet</p>
+                </Link>
+            </div>
+
+            <div className='containerCopyright'>
+                <p className='copyright'>© 2025 Merliweb</p>
+                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <p className='copyrightLink'>Site web créé par Julien Hermain</p>
                 </Link>
                 <p className='copyright'>Mentions légales</p>
-            </div>            
+            </div>
+
         </footer>
     )
 }
