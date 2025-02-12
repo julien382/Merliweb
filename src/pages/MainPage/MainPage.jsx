@@ -71,6 +71,15 @@ const MainPage = () => {
                 <p className='mainActionTextAction'>{'"Prêt(e) à vous démarquer dans le monde du digital ? Faisons équipe !"'}</p>
                 <button className="submitButton">Prendre Contact</button>
             </div>
+
+            <div className='mainProjets'>
+                <p>Nos Projets</p>
+                <h2>Découvrez nos réalisations</h2>
+                <div className='mainProjet'></div>
+                <div className='mainProjet'></div>
+                <div className='mainProjet'></div>
+                <button className="projetsButton">Voir Plus</button>
+            </div>
         </div>
     )
 }

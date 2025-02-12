@@ -70,7 +70,6 @@
 
     p{
         font-size: $font-size-sm;
-        margin-top: 1rem;
         line-height: $line-text;
     }
     
@@ -140,4 +139,50 @@
         padding: 1rem 2rem;
         margin-top: 1rem;
     }
+}
+
+.mainProjets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+
+    p{
+        font-size: $font-size-sm;
+        line-height: $line-text;
+    }
+    
+    h2{
+        font-size: $font-size-xxl;
+        font-weight: $font-weight-bold;
+        margin-top: 1rem;
+    }
+
+    .mainProjet{
+        width: 100%;
+        height: 300px;
+        background-color: $color-gray-light;
+        border-radius: 20px;
+        margin-top: 1rem;
+    }
+
+    .projetsButton {
+        padding: 1rem 2.5rem;
+        background-color: $color-primary;
+        color: white;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semi-bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin: 0 auto;
+        margin-top: 1rem;
+      
+        &:hover {
+          background-color: #387b84;
+        }
+      }
+
 }
