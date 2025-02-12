@@ -2,6 +2,7 @@ import './MainPage.scss'
 import building from "../../assets/undraw/building.svg";
 import programming from "../../assets/undraw/programming.svg";
 import studio from "../../assets/undraw/studio.svg";
+import contact from "../../assets/undraw/contact.svg";
 import arrowBottom from "../../assets/arrowBottom.svg";
 import arrowRight from "../../assets/arrowRight.svg";
 import { Link } from "react-router-dom";
@@ -79,6 +80,13 @@ const MainPage = () => {
                 <div className='mainProjet'></div>
                 <div className='mainProjet'></div>
                 <button className="projetsButton">Voir Plus</button>
+            </div>
+
+            <div className='mainContact'>
+                <img src={contact} className="mainContactImage" alt="Merliweb Logo" />
+                <h2>Prêt à faire briller votre présence en ligne ?</h2>
+                <p className='mainContactText'>{'Chez MerliWeb, nous sommes impatients de collaborer avec vous pour donner vie à vos projets numériques.'}</p>
+                <button className="submitButton">Prendre Contact</button>
             </div>
         </div>
     )

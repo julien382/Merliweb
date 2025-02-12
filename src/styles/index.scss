@@ -64,6 +64,7 @@ main {
   color: $color-blue-dark;
   box-sizing: border-box;
   margin-top: 100PX;
+  margin-bottom: 20PX;
 
   @media (min-width: 768px) {
     margin: 0 auto;
