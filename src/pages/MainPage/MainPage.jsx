@@ -42,6 +42,27 @@ const MainPage = () => {
                     <img src={studio} className="mainServiceImage" alt="mainServiceImage" />
                 </div>
             </div>
+
+            <div className='mainTemoignages'>
+                <p>Témoignages</p>
+                <h2>Ce que disent nos clients</h2>
+                <div className='mainTemoignage'>
+                    <img src={programming} className="mainTemoignageImage" alt="mainTemoignageImage" />
+                    <h3 className='mainTemoignageName'>Andrew Rathore</h3>
+                    <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+                </div>
+                <div className='mainTemoignage'>
+                    <img src={programming} className="mainTemoignageImage" alt="mainTemoignageImage" />
+                    <h3 className='mainTemoignageName'>Vera Duncan</h3>
+                    <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+                </div>
+                <div className='mainTemoignage'>
+                    <img src={programming} className="mainTemoignageImage" alt="mainTemoignageImage" />
+                    <h3 className='mainTemoignageName'>Mark Smith</h3>
+                    <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+                </div>
+            </div>
+
         </div>
     )
 }
