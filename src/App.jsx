@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import MainPage from "./pages/MainPage/MainPage";
 import ErrorPage from "./pages/Error/ErrorPage";
 import Footer from "./components/Footer/Footer";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   const location = useLocation(); // Récupère les infos sur la route actuelle
@@ -19,10 +20,10 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </main>
-      <Footer />
       <Footer />
 
     </div>
