@@ -1,7 +1,7 @@
-import './ServicesPage.scss'
+import './ProjetsPage.scss'
 import Above from '../../components/Above/Above'
 
-const ServicesPage = () => {
+const ProjetsPage = () => {
     return (
         <div className='errorPage'>
             <Above />
@@ -9,4 +9,4 @@ const ServicesPage = () => {
     )
 }
 
-export default ServicesPage
+export default ProjetsPage
