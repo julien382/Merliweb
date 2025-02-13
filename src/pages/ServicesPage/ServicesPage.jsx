@@ -2,6 +2,7 @@ import './ServicesPage.scss'
 import Above from '../../components/Above/Above'
 import multitasking from "../../assets/undraw/multitasking.svg";
 import ServiceWeb from '../../components/ServiceWeb/ServiceWeb';
+import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
     return (
@@ -27,6 +28,17 @@ const ServicesPage = () => {
                 <ServiceWeb img={multitasking} title={"Production Visuelle"} text={"Vidéos, photos, prises de vue aériennes avec drone, création de visuels professionnels."}/>
                 <ServiceWeb img={multitasking} title={"Stratégie & Gestion Digitale"} text={"Gestion des réseaux sociaux, création de contenu, campagnes publicitaires."}/>
                 <ServiceWeb img={multitasking} title={"Identité Visuelle & Branding"} text={"Conception de logos, chartes graphiques, création de supports de communication."}/>
+            </div>
+
+            <div className='servicesWebContact'>
+                <h2>Construisez votre projet digital avec nous !</h2>
+                <img src={multitasking} className="servicesWebImage" alt="mainTemoignageImage" />
+                <p className='servicesWebName'>{"Nous analysons votre entreprise pour définir les solutions digitales parfaitement adaptées à vos besoins. "}</p>
+                <p className='servicesWebText'>{"Chaque projet est unique, c’est pourquoi nous vous proposons des options sur-mesure, en mettant l'accent sur ce qui vous correspond le mieux."}</p>
+                <p className='servicesWebTextAction'>{"Contactez-nous dès maintenant pour discuter de vos besoins et obtenir un devis personnalisé."}</p>
+                <Link to="/contact">
+                    <button className="submitButton">Obtenir un devis</button>
+                </Link>
             </div>
         </div>
     )

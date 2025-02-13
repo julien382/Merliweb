@@ -18,3 +18,49 @@
         margin-top: 1rem;
     }
 }
+
+.servicesWebContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    background-color: $color-gray-light;
+    border-radius: 20px;
+    padding: 1.5rem;
+
+    h2{
+        font-size: $font-size-xxl;
+        font-weight: $font-weight-bold;
+        margin-top: 1rem;
+    }
+
+    .servicesWebImage{
+        width: 80%;
+        margin-top: 0.5rem;
+    }
+
+    p{
+        font-size: $font-size-md;
+        line-height: $line-text;
+    }
+
+    .servicesWebName{
+        margin-top: 0.5rem;
+    }
+    
+    .servicesWebText{
+        font-weight: $font-weight-bold;
+        margin-top: 0.5rem;
+    }
+
+    .servicesWebTextAction{
+        font-style: italic;
+        margin-top: 0.5rem;
+    }
+
+    .submitButton {
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+    }
+}
