@@ -6,6 +6,7 @@ import arrowBottom from "../../assets/arrowBottom.svg";
 import arrowRight from "../../assets/arrowRight.svg";
 import { Link } from "react-router-dom";
 import ActionContact from '../../components/ActionContact/ActionContact';
+import Projet from '../../components/Projet/Projet';
 
 const MainPage = () => {
 
@@ -80,9 +81,9 @@ const MainPage = () => {
             <div className='mainProjets'>
                 <p>Nos Projets</p>
                 <h2>Découvrez nos réalisations</h2>
-                <div className='mainProjet'></div>
-                <div className='mainProjet'></div>
-                <div className='mainProjet'></div>
+                <Projet img={building} type={"Site vitrine"} title={"Merliweb"}/>
+                <Projet img={programming} type={"Site vitrine"} title={"Merliweb"}/>
+                <Projet img={studio} type={"Site vitrine"} title={"Merliweb"}/>
                 <Link to="/projets">
                     <button className="mainProjetsButton">Voir Plus</button>
                 </Link>
