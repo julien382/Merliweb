@@ -23,7 +23,7 @@ const ServicesPage = () => {
                 text={"Du développement web à la communication digitale, nous créons des solutions sur-mesure pour renforcer votre présence en ligne et atteindre vos objectifs. Voici nos services :"}
             />
             <div className='servicesWeb'>
-                <p>Nos services</p>
+                <p>Développement Web</p>
                 <h2>Découvrez nos services Web</h2>
                 <ServiceWeb img={designer} title={"Design UX/UI"} text={"Création d’interfaces modernes et ergonomiques"}/>
                 <ServiceWeb img={shopping} title={"Développement de sites web"} text={"Sites vitrines, e-commerce, portfolios, blogs, Applications web"}/>
@@ -34,6 +34,7 @@ const ServicesPage = () => {
             </div>
 
             <div className='servicesWeb'>
+                <p>Communication</p>
                 <h2>Découvrez nos services de communication</h2>
                 <ServiceWeb img={drone} title={"Production Visuelle"} text={"Vidéos, photos, prises de vue aériennes avec drone, création de visuels professionnels."}/>
                 <ServiceWeb img={socialDashboard} title={"Stratégie & Gestion Digitale"} text={"Gestion des réseaux sociaux, création de contenu, campagnes publicitaires."}/>
