@@ -84,7 +84,7 @@ const MainPage = () => {
                 <div className='mainProjet'></div>
                 <div className='mainProjet'></div>
                 <Link to="/projets">
-                    <button className="projetsButton">Voir Plus</button>
+                    <button className="mainProjetsButton">Voir Plus</button>
                 </Link>
             </div>
 
