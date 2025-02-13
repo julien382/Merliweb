@@ -1,0 +1,33 @@
+@use "../../styles/index" as *;
+
+.actionContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $color-gray-light;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-top: 5rem;
+
+    .actionContactImage{
+        width: 100%;
+    }
+
+    h2{
+        font-size: $font-size-xxl;
+        font-weight: $font-weight-bold;
+        margin-top: 1rem;
+    }
+
+    .actionContactText{
+        font-size: $font-size-md;
+        line-height: $line-text;
+        margin-top: 1rem;
+    }
+
+    .submitButton{
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+    }
+}

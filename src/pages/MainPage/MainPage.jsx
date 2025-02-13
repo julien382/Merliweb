@@ -6,6 +6,7 @@ import contact from "../../assets/undraw/contact.svg";
 import arrowBottom from "../../assets/arrowBottom.svg";
 import arrowRight from "../../assets/arrowRight.svg";
 import { Link } from "react-router-dom";
+import ActionContact from '../../components/ActionContact/ActionContact';
 
 const MainPage = () => {
 
@@ -15,7 +16,9 @@ const MainPage = () => {
             <div className="mainAbove">
                 <h1>Surfez sur la vague du digital avec Merliweb</h1>
                 <p>{"L'agence qui donne vie à votre présence en ligne."}</p>
-                <button className="submitButton">Contactez-Nous</button>
+                <Link to="/contact">
+                    <button className="submitButton">Contactez-Nous</button>
+                </Link>
                 <img src={building} className="mainAboveImage" alt="mainAboveImage" />
             </div>
 
@@ -70,7 +73,9 @@ const MainPage = () => {
                 <p className='mainActionName'>{"Fondée par Julien Hermain, MerliWeb a été créée pour valoriser chaque entreprise sur le web."}</p>
                 <p className='mainActionText'>{"Notre mission ? Vous accompagner à chaque étape de votre transformation numérique : de la conception de sites web modernes et performants à la gestion de vos réseaux sociaux en passant par des stratégies de contenu impactantes."}</p>
                 <p className='mainActionTextAction'>{'"Prêt(e) à vous démarquer dans le monde du digital ? Faisons équipe !"'}</p>
-                <button className="submitButton">Prendre Contact</button>
+                <Link to="/contact">
+                    <button className="submitButton">Prendre Contact</button>
+                </Link>
             </div>
 
             <div className='mainProjets'>
@@ -79,15 +84,12 @@ const MainPage = () => {
                 <div className='mainProjet'></div>
                 <div className='mainProjet'></div>
                 <div className='mainProjet'></div>
-                <button className="projetsButton">Voir Plus</button>
+                <Link to="/projets">
+                    <button className="projetsButton">Voir Plus</button>
+                </Link>
             </div>
 
-            <div className='mainContact'>
-                <img src={contact} className="mainContactImage" alt="Merliweb Logo" />
-                <h2>Prêt à faire briller votre présence en ligne ?</h2>
-                <p className='mainContactText'>{'Chez MerliWeb, nous sommes impatients de collaborer avec vous pour donner vie à vos projets numériques.'}</p>
-                <button className="submitButton">Prendre Contact</button>
-            </div>
+            <ActionContact />
         </div>
     )
 }
