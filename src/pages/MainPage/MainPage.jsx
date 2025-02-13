@@ -2,7 +2,6 @@ import './MainPage.scss'
 import building from "../../assets/undraw/building.svg";
 import programming from "../../assets/undraw/programming.svg";
 import studio from "../../assets/undraw/studio.svg";
-import contact from "../../assets/undraw/contact.svg";
 import arrowBottom from "../../assets/arrowBottom.svg";
 import arrowRight from "../../assets/arrowRight.svg";
 import { Link } from "react-router-dom";
