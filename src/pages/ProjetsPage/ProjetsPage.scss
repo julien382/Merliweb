@@ -74,13 +74,6 @@
 
 }
 
-.modalImage {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 1rem;
-}
-
 .closeButton {
     position: absolute;
     top: 10px;
@@ -88,8 +81,8 @@
     color: $color-blue-dark;
     background: none;
     border: none;
-    font-size: 20px;
     cursor: pointer;
+    width: 30px;
 }
 
 .carousel {
@@ -100,9 +93,10 @@
     width: 100%;
 
     .modalImage {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         border-radius: 10px;
+        margin-top: 1rem;
     }
 
     .prevButton,
@@ -110,25 +104,17 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        font-size: 24px;
         cursor: pointer;
-        padding: 10px;
+        //background-color: $color-gray-light;
         border-radius: 50%;
+        width: 50px;
     }
 
     .prevButton {
-        left: 10px;
+        left: 0px;
     }
 
     .nextButton {
-        right: 10px;
-    }
-
-    .prevButton:hover,
-    .nextButton:hover {
-        background: rgba(0, 0, 0, 0.8);
+        right: 5px;
     }
 }

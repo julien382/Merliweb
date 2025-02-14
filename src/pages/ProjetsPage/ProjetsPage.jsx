@@ -2,11 +2,14 @@ import { useState } from 'react';
 import './ProjetsPage.scss';
 import Above from '../../components/Above/Above';
 import ActionContact from '../../components/ActionContact/ActionContact';
+import Projet from '../../components/Projet/Projet';
 import asset from "../../assets/undraw/asset.svg";
 import react from "../../assets/undraw/react.svg";
 import color from "../../assets/undraw/color.svg";
+import cross from "../../assets/cross.svg";
+import chevronLeft from "../../assets/chevronLeft.svg";
+import chevronRight from "../../assets/chevronRight.svg";
 import { Link } from "react-router-dom";
-import Projet from '../../components/Projet/Projet';
 
 const projetsData = [
     {
@@ -111,13 +114,13 @@ const ProjetsPage = () => {
             {selectedProject && selectedProject.images?.length > 0 && (
                 <div className="modal" onClick={closeModal}>
                     <div className="modalContent" onClick={(e) => e.stopPropagation()}>
-                        <button className="closeButton" onClick={closeModal}>✖</button>
+                        <img src={cross} className="closeButton" alt="closeButton" onClick={closeModal} />
                         <h2>{selectedProject.title}</h2>
                         <p>{selectedProject.description}</p>
                         
                         <div className="carousel">
                             {selectedProject.images.length > 1 && (
-                                <button className="prevButton" onClick={prevImage}>❮</button>
+                                <img src={chevronLeft} className="prevButton" alt="prevButton" onClick={prevImage} />
                             )}
 
                             <img 
@@ -127,7 +130,7 @@ const ProjetsPage = () => {
                             />
 
                             {selectedProject.images.length > 1 && (
-                                <button className="nextButton" onClick={nextImage}>❯</button>
+                                <img src={chevronRight} className="nextButton" alt="nextButton" onClick={nextImage} />
                             )}
                         </div>
                     </div>
