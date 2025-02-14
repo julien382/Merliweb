@@ -88,8 +88,8 @@ const ProjetsPage = () => {
 
             {/* Modale affichant le projet sélectionné */}
             {selectedProject && (
-                <div className="modal">
-                    <div className="modalContent">
+                <div className="modal" onClick={closeModal}>
+                    <div className="modalContent" onClick={(e) => e.stopPropagation()}>
                         <button className="closeButton" onClick={closeModal}>✖</button>
                         <h2>{selectedProject.title}</h2>
                         <p>{selectedProject.description}</p>
