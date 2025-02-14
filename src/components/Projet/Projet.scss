@@ -3,12 +3,12 @@
 .projet{
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1; // Carré parfait
+    aspect-ratio: 1 / 0.8;
     overflow: hidden;
     background-color: #f5f5f5;
     background-color: $color-gray-light;
     border-radius: 20px;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 
     .projetImage {
         width: 100%;

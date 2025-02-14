@@ -1,14 +1,67 @@
 import './MainPage.scss'
+import { useState } from 'react';
 import building from "../../assets/undraw/building.svg";
 import programming from "../../assets/undraw/programming.svg";
 import studio from "../../assets/undraw/studio.svg";
 import arrowBottom from "../../assets/arrowBottom.svg";
 import arrowRight from "../../assets/arrowRight.svg";
+import cross from "../../assets/cross.svg";
+import chevronLeft from "../../assets/chevronLeft.svg";
+import chevronRight from "../../assets/chevronRight.svg";
 import { Link } from "react-router-dom";
 import ActionContact from '../../components/ActionContact/ActionContact';
 import Projet from '../../components/Projet/Projet';
 
+const projetsData = [
+    {
+        images: [building, studio, programming], 
+        type: "Site vitrine",
+        title: "Merliweb",
+        description: "Un site e-commerce innovant conçu pour maximiser l’expérience d’achat..."
+    },
+    {
+        images: [programming, studio, building],
+        type: "Application mobile",
+        title: "App Foodies",
+        description: "Une application mobile permettant aux utilisateurs de commander des plats en ligne..."
+    },
+    {
+        images: [studio, programming, building],
+        type: "E-commerce",
+        title: "ShopNow",
+        description: "Un site e-commerce moderne et optimisé pour la conversion..."
+    }
+];
+
 const MainPage = () => {
+    const [selectedProject, setSelectedProject] = useState(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    
+    const handleClick = (project) => {
+        setSelectedProject(project);
+        setCurrentImageIndex(0); // Reset l’index quand on ouvre la modale
+    };
+    
+    const closeModal = () => {
+        setSelectedProject(null);
+    };
+    
+    const nextImage = () => {
+        if (selectedProject?.images?.length > 0) {
+            setCurrentImageIndex((prevIndex) =>
+                prevIndex + 1 < selectedProject.images.length ? prevIndex + 1 : 0
+            );
+        }
+    };
+    
+    const prevImage = () => {
+        if (selectedProject?.images?.length > 0) {
+            setCurrentImageIndex((prevIndex) =>
+                prevIndex - 1 >= 0 ? prevIndex - 1 : selectedProject.images.length - 1
+            );
+        }
+    };
+    
 
     return (
         <div className="mainPage">
@@ -81,12 +134,46 @@ const MainPage = () => {
             <div className='mainProjets'>
                 <p>Nos Projets</p>
                 <h2>Découvrez nos réalisations</h2>
-                <Projet img={building} type={"Site vitrine"} title={"Merliweb"}/>
-                <Projet img={programming} type={"Site vitrine"} title={"Merliweb"}/>
-                <Projet img={studio} type={"Site vitrine"} title={"Merliweb"}/>
+                {projetsData.map((project, index) => (
+                    <Projet 
+                        key={index} 
+                        img={project.images?.[0]} // Afficher la première image par défaut
+                        type={project.type} 
+                        title={project.title} 
+                        onClick={() => handleClick(project)}
+                    />
+                ))}
                 <Link to="/projets">
                     <button className="mainProjetsButton">Voir Plus</button>
                 </Link>
+
+                {/* Modale avec navigation des images */}
+                            {selectedProject && selectedProject.images?.length > 0 && (
+                                <div className="modal" onClick={closeModal}>
+                                    <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+                                        <img src={cross} className="closeButton" alt="closeButton" onClick={closeModal} />
+                                        <h2>{selectedProject.title}</h2>
+                                        <p>{selectedProject.description}</p>
+                                        
+                                        <div className="carousel">
+                                            {selectedProject.images.length > 1 && (
+                                                <img src={chevronLeft} className="prevButton" alt="prevButton" onClick={prevImage} />
+                                            )}
+                
+                                            <img 
+                                                src={selectedProject.images[currentImageIndex]} 
+                                                alt={selectedProject.title} 
+                                                className="modalImage"
+                                            />
+                
+                                            {selectedProject.images.length > 1 && (
+                                                <img src={chevronRight} className="nextButton" alt="nextButton" onClick={nextImage} />
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
             </div>
 
             <ActionContact />

@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import './ProjetsPage.scss';
+import { useState } from 'react';
 import Above from '../../components/Above/Above';
 import ActionContact from '../../components/ActionContact/ActionContact';
 import Projet from '../../components/Projet/Projet';
@@ -91,7 +91,7 @@ const ProjetsPage = () => {
                 <p>Nos Projets</p>
                 <h2>Découvrez nos réalisations</h2>
 
-                <div className="projetsGrid">
+                <div>
                     {projetsData.map((project, index) => (
                         <Projet 
                             key={index} 
