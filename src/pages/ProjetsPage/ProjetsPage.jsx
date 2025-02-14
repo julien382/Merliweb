@@ -1,5 +1,5 @@
-import './ProjetsPage.scss';
 import { useState } from 'react';
+import './ProjetsPage.scss';
 import Above from '../../components/Above/Above';
 import ActionContact from '../../components/ActionContact/ActionContact';
 import Projet from '../../components/Projet/Projet';
@@ -9,7 +9,6 @@ import color from "../../assets/undraw/color.svg";
 import cross from "../../assets/cross.svg";
 import chevronLeft from "../../assets/chevronLeft.svg";
 import chevronRight from "../../assets/chevronRight.svg";
-import { Link } from "react-router-dom";
 
 const projetsData = [
     {
@@ -47,12 +46,19 @@ const projetsData = [
         type: "Plateforme SaaS",
         title: "CloudManager",
         description: "Une solution SaaS pour la gestion des services cloud..."
+    },
+    {
+        images: [asset, asset, asset],
+        type: "Application",
+        title: "Task Manager",
+        description: "Une application de gestion de tâches pour les professionnels..."
     }
 ];
 
 const ProjetsPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [showAll, setShowAll] = useState(false);
 
     const handleClick = (project) => {
         setSelectedProject(project);
@@ -79,6 +85,8 @@ const ProjetsPage = () => {
         }
     };
 
+    const displayedProjects = showAll ? projetsData : projetsData.slice(0, 6);
+
     return (
         <div className='projetsPage'>
             <Above 
@@ -91,8 +99,8 @@ const ProjetsPage = () => {
                 <p>Nos Projets</p>
                 <h2>Découvrez nos réalisations</h2>
 
-                <div>
-                    {projetsData.map((project, index) => (
+                <div className="projetsGrid">
+                    {displayedProjects.map((project, index) => (
                         <Projet 
                             key={index} 
                             img={project.images?.[0]} // Afficher la première image par défaut
@@ -103,9 +111,14 @@ const ProjetsPage = () => {
                     ))}
                 </div>
 
-                <Link to="/projets">
-                    <button className="projetsButton">Voir Plus</button>
-                </Link>
+                {projetsData.length > 6 && (
+                    <button 
+                        className="projetsButton" 
+                        onClick={() => setShowAll(!showAll)}
+                    >
+                        {showAll ? "Voir Moins" : "Voir Plus"}
+                    </button>
+                )}
             </div>
 
             <ActionContact />
