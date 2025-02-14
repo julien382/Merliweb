@@ -91,3 +91,44 @@
     font-size: 20px;
     cursor: pointer;
 }
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    .modalImage {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .prevButton,
+    .nextButton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    .prevButton {
+        left: 10px;
+    }
+
+    .nextButton {
+        right: 10px;
+    }
+
+    .prevButton:hover,
+    .nextButton:hover {
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
