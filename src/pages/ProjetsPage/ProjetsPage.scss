@@ -53,9 +53,9 @@
 .modalContent {
     margin: 1.5rem;
     background: white;
-    padding: 20px;
+    padding: 1rem;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -64,10 +64,10 @@
     h2{
         font-size: $font-size-xxl;
         font-weight: $font-weight-bold;
-        margin-top: 0.5rem;
     }
-
+    
     p{
+        margin-top: 0.5rem;
         font-size: $font-size-sm;
         line-height: $line-text;
     }
@@ -78,7 +78,7 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 1rem;
 }
 
 .closeButton {
