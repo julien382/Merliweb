@@ -135,6 +135,26 @@ const ProjetsPage = () => {
                             <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
                                 <p className='modalLink'>Voir le projet</p>
                             </a>
+                            <h2>{selectedProject.title}</h2>
+                            <p>{selectedProject.description}</p>
+                            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                <p className='modalLink'>Voir le projet</p>
+                            </a>
+                            <h2>{selectedProject.title}</h2>
+                            <p>{selectedProject.description}</p>
+                            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                <p className='modalLink'>Voir le projet</p>
+                            </a>
+                            <h2>{selectedProject.title}</h2>
+                            <p>{selectedProject.description}</p>
+                            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                <p className='modalLink'>Voir le projet</p>
+                            </a>
+                            <h2>{selectedProject.title}</h2>
+                            <p>{selectedProject.description}</p>
+                            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                <p className='modalLink'>Voir le projet</p>
+                            </a>
                         </div>
                         
                         <div className="carousel">
