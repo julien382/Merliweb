@@ -24,13 +24,15 @@ const projetsData = [
         images: [ohmylunch1, ohmylunch2, ohmylunch3], 
         type: "Site de réservation",
         title: "ohmylunch",
-        description: "Plateforme pour choisir et composer son menu en restaurant."
+        description: "Plateforme pour choisir et composer son menu en restaurant.",
+        link: "https://julien382.github.io/ohmylunch/"
     },
     {
         images: [baratto1, baratto2, baratto3, baratto4],
         type: "Site Vitrine",
         title: "Baratto Precision",
-        description: "Site vitrine pour une entreprise d'impression 3D"
+        description: "Site vitrine pour une entreprise d'impression 3D",
+        link: "https://barattoprecision.com/"
     },
     {
         images: [studio, programming, building],
@@ -161,6 +163,9 @@ const MainPage = () => {
                                     <img src={cross} className="closeButton" alt="closeButton" onClick={closeModal} />
                                     <h2>{selectedProject.title}</h2>
                                     <p>{selectedProject.description}</p>
+                                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                        <p className='modalLink'>Voir le projet</p>
+                                    </a>
                                         
                                 </div>
                                         
