@@ -38,7 +38,7 @@ const projetsData = [
         type: "Reel",
         title: "Henson",
         description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
-        link: "https://www.instagram.com/eehensonlamolieredeberck/"
+        link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
     },
     {
         images: [asset, asset, asset],
