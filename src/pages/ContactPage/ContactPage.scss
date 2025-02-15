@@ -12,6 +12,17 @@
   }
 }
 
+.contactSocialMedia{
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+
+  .logoSocialMedia{
+    height: 25px;
+    margin-right: 15px;
+  }
+}
+
 .contactInfo{
     display: flex;
     justify-content: space-between;

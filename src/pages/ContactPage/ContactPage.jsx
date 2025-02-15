@@ -3,6 +3,11 @@ import contact from "../../assets/undraw/contact.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import linkedin from "../../assets/reseaux/linkedin.svg";
+import facebook from "../../assets/reseaux/facebook.svg";
+import insta from "../../assets/reseaux/insta.svg";
+import tiktok from "../../assets/reseaux/tiktok.svg";
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -43,8 +48,20 @@ const ContactPage = () => {
         <h1>Nous</h1>
 
         <div className='contactSocialMedia'>
-
+            <Link to="https://www.linkedin.com/in/julien-hermain/">
+                <img src={linkedin} className="logoSocialMedia" alt="arrow" />
+            </Link>
+            <Link to="https://www.linkedin.com/in/julien-hermain/">
+                <img src={facebook} className="logoSocialMedia" alt="arrow" />
+            </Link>
+            <Link to="https://www.linkedin.com/in/julien-hermain/">
+                <img src={insta} className="logoSocialMedia" alt="arrow" />
+            </Link>
+            <Link to="https://www.linkedin.com/in/julien-hermain/">
+                <img src={tiktok} className="logoSocialMedia" alt="arrow" />
+            </Link>
         </div>
+
 
         <div className='contactInfo'>
             <div className='containerLocalisation'>
