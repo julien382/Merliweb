@@ -31,13 +31,13 @@
     height: 40px;
 }
 
-/* Burger menu */
 .burger {
     display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
     z-index: 1100;
+    transition: top 0.3s ease-in-out;
 
     .line {
         width: 30px;
@@ -56,6 +56,13 @@
         .line:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
         }
+    }
+
+    &.fixed {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1500;
     }
 }
 

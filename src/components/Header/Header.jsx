@@ -11,6 +11,18 @@ const Header = () => {
   const location = useLocation(); // Pour détecter le changement de page
 
   useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // Désactive le scroll
+    } else {
+      document.body.style.overflow = ""; // Réactive le scroll
+    }
+  
+    return () => {
+      document.body.style.overflow = ""; // Sécurité pour éviter tout blocage
+    };
+  }, [isOpen]);
+  
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY && window.scrollY > 50) {
         setIsHeaderVisible(false);
