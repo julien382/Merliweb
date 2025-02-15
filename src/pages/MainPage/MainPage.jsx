@@ -1,5 +1,5 @@
-import './MainPage.scss'
-import { useState } from 'react';
+import './MainPage.scss';
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import ActionContact from '../../components/ActionContact/ActionContact';
 import Projet from '../../components/Projet/Projet';
@@ -50,16 +50,29 @@ const projetsData = [
 const MainPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    
+
+    // Désactiver le scroll lorsque la modale est ouverte
+    useEffect(() => {
+        if (selectedProject) {
+            document.body.style.overflow = "hidden"; // Désactiver le scroll
+        } else {
+            document.body.style.overflow = "auto"; // Réactiver le scroll
+        }
+
+        return () => {
+            document.body.style.overflow = "auto"; // Nettoyage lors du démontage
+        };
+    }, [selectedProject]);
+
     const handleClick = (project) => {
         setSelectedProject(project);
         setCurrentImageIndex(0); // Reset l’index quand on ouvre la modale
     };
-    
+
     const closeModal = () => {
         setSelectedProject(null);
     };
-    
+
     const nextImage = () => {
         if (selectedProject?.images?.length > 0) {
             setCurrentImageIndex((prevIndex) =>
@@ -67,7 +80,7 @@ const MainPage = () => {
             );
         }
     };
-    
+
     const prevImage = () => {
         if (selectedProject?.images?.length > 0) {
             setCurrentImageIndex((prevIndex) =>
@@ -161,43 +174,69 @@ const MainPage = () => {
                 </Link>
 
                 {/* Modale avec navigation des images */}
-                    {selectedProject && selectedProject.images?.length > 0 && (
-                        <div className="modal" onClick={closeModal}>
-                            <div className="modalContent" onClick={(e) => e.stopPropagation()}>
-                                <div className='modalContentText'>
-                                    <img src={cross} className="closeButton" alt="closeButton" onClick={closeModal} />
-                                    <h2>{selectedProject.title}</h2>
-                                    <p>{selectedProject.description}</p>
-                                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
-                                        <p className='modalLink'>Voir le projet</p>
-                                    </a>
-                                        
-                                </div>
-                                        
-                                <div className="carousel">
-                                    {selectedProject.images.length > 1 && (
-                                        <img src={chevronLeft} className="prevButton" alt="prevButton" onClick={prevImage} />
-                                    )}
-                
-                                    <img 
-                                        src={selectedProject.images[currentImageIndex]} 
-                                        alt={selectedProject.title} 
-                                        className="modalImage"
-                                    />
-                
-                                    {selectedProject.images.length > 1 && (
-                                        <img src={chevronRight} className="nextButton" alt="nextButton" onClick={nextImage} />
-                                    )}
-                                </div>
+                {selectedProject && selectedProject.images?.length > 0 && (
+                    <div className="modal" onClick={closeModal}>
+                        <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+                            <div className='modalContentText'>
+                                <img src={cross} className="closeButton" alt="closeButton" onClick={closeModal} />
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <h2>{selectedProject.title}</h2>
+                                <p>{selectedProject.description}</p>
+                                <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                    <p className='modalLink'>Voir le projet</p>
+                                </a>
+                            </div>
+                            
+                            <div className="carousel">
+                                {selectedProject.images.length > 1 && (
+                                    <img src={chevronLeft} className="prevButton" alt="prevButton" onClick={prevImage} />
+                                )}
+
+                                <img 
+                                    src={selectedProject.images[currentImageIndex]} 
+                                    alt={selectedProject.title} 
+                                    className="modalImage"
+                                />
+
+                                {selectedProject.images.length > 1 && (
+                                    <img src={chevronRight} className="nextButton" alt="nextButton" onClick={nextImage} />
+                                )}
                             </div>
                         </div>
-                    )}
-
+                    </div>
+                )}
             </div>
 
             <ActionContact />
         </div>
-    )
+    );
 }
 
-export default MainPage
+export default MainPage;

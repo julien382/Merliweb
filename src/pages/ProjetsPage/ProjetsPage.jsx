@@ -1,5 +1,5 @@
 import './ProjetsPage.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Above from '../../components/Above/Above';
 import ActionContact from '../../components/ActionContact/ActionContact';
 import Projet from '../../components/Projet/Projet';
@@ -40,34 +40,6 @@ const projetsData = [
         title: "Henson",
         description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
         link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
-    },
-    {
-        images: [ohmylunch1, ohmylunch2, ohmylunch3], 
-        type: "Site de réservation",
-        title: "ohmylunch",
-        description: "Plateforme pour choisir et composer son menu en restaurant.",
-        link: "https://julien382.github.io/ohmylunch/"
-    },
-    {
-        images: [baratto1, baratto2, baratto3, baratto4],
-        type: "Site Vitrine",
-        title: "Baratto Precision",
-        description: "Site vitrine pour une entreprise d'impression 3D",
-        link: "https://barattoprecision.com/"
-    },
-    {
-        images: [reelHenson1, reelHenson2, reelHenson3],
-        type: "Reel",
-        title: "Henson",
-        description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
-        link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
-    },
-    {
-        images: [reelHenson1, reelHenson2, reelHenson3],
-        type: "Reel",
-        title: "Henson",
-        description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
-        link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
     }
 ];
 
@@ -76,9 +48,22 @@ const ProjetsPage = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [showAll, setShowAll] = useState(false);
 
+    // Désactiver le scroll de la page quand la modale est ouverte
+    useEffect(() => {
+        if (selectedProject) {
+            document.body.style.overflow = "hidden"; // Désactiver le scroll
+        } else {
+            document.body.style.overflow = "auto"; // Réactiver le scroll
+        }
+
+        return () => {
+            document.body.style.overflow = "auto"; // Nettoyage lors du démontage
+        };
+    }, [selectedProject]);
+
     const handleClick = (project) => {
         setSelectedProject(project);
-        setCurrentImageIndex(0); // Reset l’index quand on ouvre la modale
+        setCurrentImageIndex(0);
     };
 
     const closeModal = () => {
@@ -119,7 +104,7 @@ const ProjetsPage = () => {
                     {displayedProjects.map((project, index) => (
                         <Projet 
                             key={index} 
-                            img={project.images?.[0]} // Afficher la première image par défaut
+                            img={project.images?.[0]} 
                             type={project.type} 
                             title={project.title} 
                             onClick={() => handleClick(project)}
@@ -139,7 +124,7 @@ const ProjetsPage = () => {
 
             <ActionContact />
 
-            {/* Modale avec navigation des images */}
+            {/* Modale */}
             {selectedProject && selectedProject.images?.length > 0 && (
                 <div className="modal" onClick={closeModal}>
                     <div className="modalContent" onClick={(e) => e.stopPropagation()}>
@@ -150,7 +135,6 @@ const ProjetsPage = () => {
                             <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
                                 <p className='modalLink'>Voir le projet</p>
                             </a>
-
                         </div>
                         
                         <div className="carousel">
