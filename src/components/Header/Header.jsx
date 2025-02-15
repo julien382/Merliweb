@@ -6,51 +6,32 @@ import logo from "../../assets/logo/Merliweb.svg";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  const location = useLocation(); // Pour détecter le changement de page
+  const location = useLocation(); 
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden"; // Désactive le scroll
+      document.body.style.overflow = "hidden"; 
     } else {
-      document.body.style.overflow = ""; // Réactive le scroll
+      document.body.style.overflow = ""; 
     }
-  
-    return () => {
-      document.body.style.overflow = ""; // Sécurité pour éviter tout blocage
-    };
+    return () => (document.body.style.overflow = ""); 
   }, [isOpen]);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        setIsHeaderVisible(false);
-      } else if (window.scrollY < lastScrollY) {
-        setIsHeaderVisible(true);
-      }
 
-      setLastScrollY(window.scrollY);
-      setScrolled(window.scrollY > 50);
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsHeaderVisible(currentScrollY < lastScrollY || currentScrollY < 50);
+      setScrolled(currentScrollY > 50);
+      lastScrollY = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
-  // Fermer le menu quand on clique à l'extérieur
-  useEffect(() => {
-    const closeMenuOnClickOutside = (e) => {
-      if (isOpen && !e.target.closest(".header")) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("click", closeMenuOnClickOutside);
-    return () => document.removeEventListener("click", closeMenuOnClickOutside);
-  }, [isOpen]);
-
-  // Fermer le menu quand la route change
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
