@@ -1,5 +1,9 @@
 import './MainPage.scss'
 import { useState } from 'react';
+import { Link } from "react-router-dom";
+import ActionContact from '../../components/ActionContact/ActionContact';
+import Projet from '../../components/Projet/Projet';
+
 import ohmylunch1 from "../../assets/projets/ohmylunch/ohmylunch1.png";
 import ohmylunch2 from "../../assets/projets/ohmylunch/ohmylunch2.png";
 import ohmylunch3 from "../../assets/projets/ohmylunch/ohmylunch3.png";
@@ -18,9 +22,6 @@ import arrowRight from "../../assets/arrowRight.svg";
 import cross from "../../assets/cross.svg";
 import chevronLeft from "../../assets/chevronLeft.svg";
 import chevronRight from "../../assets/chevronRight.svg";
-import { Link } from "react-router-dom";
-import ActionContact from '../../components/ActionContact/ActionContact';
-import Projet from '../../components/Projet/Projet';
 
 const projetsData = [
     {

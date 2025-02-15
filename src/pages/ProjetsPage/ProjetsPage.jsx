@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Above from '../../components/Above/Above';
 import ActionContact from '../../components/ActionContact/ActionContact';
 import Projet from '../../components/Projet/Projet';
+
 import ohmylunch1 from "../../assets/projets/ohmylunch/ohmylunch1.png";
 import ohmylunch2 from "../../assets/projets/ohmylunch/ohmylunch2.png";
 import ohmylunch3 from "../../assets/projets/ohmylunch/ohmylunch3.png";
@@ -41,28 +42,32 @@ const projetsData = [
         link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
     },
     {
-        images: [asset, asset, asset],
-        type: "Portfolio",
-        title: "John Doe Portfolio",
-        description: "Un portfolio interactif mettant en valeur les projets d’un designer..."
+        images: [ohmylunch1, ohmylunch2, ohmylunch3], 
+        type: "Site de réservation",
+        title: "ohmylunch",
+        description: "Plateforme pour choisir et composer son menu en restaurant.",
+        link: "https://julien382.github.io/ohmylunch/"
     },
     {
-        images: [asset, asset, asset],
-        type: "Blog",
-        title: "TechNews",
-        description: "Un blog dynamique et responsive sur les nouvelles technologies..."
+        images: [baratto1, baratto2, baratto3, baratto4],
+        type: "Site Vitrine",
+        title: "Baratto Precision",
+        description: "Site vitrine pour une entreprise d'impression 3D",
+        link: "https://barattoprecision.com/"
     },
     {
-        images: [asset, asset, asset],
-        type: "Plateforme SaaS",
-        title: "CloudManager",
-        description: "Une solution SaaS pour la gestion des services cloud..."
+        images: [reelHenson1, reelHenson2, reelHenson3],
+        type: "Reel",
+        title: "Henson",
+        description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
+        link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
     },
     {
-        images: [asset, asset, asset],
-        type: "Application",
-        title: "Task Manager",
-        description: "Une application de gestion de tâches pour les professionnels..."
+        images: [reelHenson1, reelHenson2, reelHenson3],
+        type: "Reel",
+        title: "Henson",
+        description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
+        link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
     }
 ];
 
