@@ -1,39 +1,53 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.scss";
 import logo from "../../assets/logo/Merliweb.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0); // Ajouter un état pour suivre la dernière position de scroll
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true); // État pour contrôler la visibilité du header
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const location = useLocation(); // Pour détecter le changement de page
 
   useEffect(() => {
     const handleScroll = () => {
-      // Si on fait défiler vers le bas
       if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        // L'utilisateur fait défiler vers le bas
         setIsHeaderVisible(false);
       } else if (window.scrollY < lastScrollY) {
-        // L'utilisateur fait défiler vers le haut
         setIsHeaderVisible(true);
       }
 
-      // Met à jour la position du dernier scroll
       setLastScrollY(window.scrollY);
-
-      // Gérer le changement de fond du header lors du défilement
       setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]); // Dépendance à lastScrollY pour recalculer le comportement de scroll
+  }, [lastScrollY]);
+
+  // Fermer le menu quand on clique à l'extérieur
+  useEffect(() => {
+    const closeMenuOnClickOutside = (e) => {
+      if (isOpen && !e.target.closest(".header")) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", closeMenuOnClickOutside);
+    return () => document.removeEventListener("click", closeMenuOnClickOutside);
+  }, [isOpen]);
+
+  // Fermer le menu quand la route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   return (
     <header
-      className={`header ${scrolled ? "scrolled" : ""} ${isHeaderVisible ? "" : "hidden"}`}
+      className={`header ${scrolled ? "scrolled" : ""} ${isHeaderVisible ? "" : "hidden"} ${
+        isOpen ? "menu-open" : ""
+      }`}
     >
       <Link to="/">
         <img src={logo} className="logo" alt="Merliweb Logo" />
@@ -46,7 +60,7 @@ const Header = () => {
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
-      <div className="burger" onClick={() => setIsOpen(!isOpen)}>
+      <div className={`burger ${isOpen ? "open" : ""}`} onClick={() => setIsOpen(!isOpen)}>
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
