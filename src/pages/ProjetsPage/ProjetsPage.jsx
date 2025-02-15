@@ -3,8 +3,14 @@ import './ProjetsPage.scss';
 import Above from '../../components/Above/Above';
 import ActionContact from '../../components/ActionContact/ActionContact';
 import Projet from '../../components/Projet/Projet';
+import ohmylunch1 from "../../assets/projets/ohmylunch/ohmylunch1.png";
+import ohmylunch2 from "../../assets/projets/ohmylunch/ohmylunch2.png";
+import ohmylunch3 from "../../assets/projets/ohmylunch/ohmylunch3.png";
+import baratto1 from "../../assets/projets/baratto/baratto1.png";
+import baratto2 from "../../assets/projets/baratto/baratto2.png";
+import baratto3 from "../../assets/projets/baratto/baratto3.png";
+import baratto4 from "../../assets/projets/baratto/baratto4.png";
 import asset from "../../assets/undraw/asset.svg";
-import react from "../../assets/undraw/react.svg";
 import color from "../../assets/undraw/color.svg";
 import cross from "../../assets/cross.svg";
 import chevronLeft from "../../assets/chevronLeft.svg";
@@ -12,16 +18,16 @@ import chevronRight from "../../assets/chevronRight.svg";
 
 const projetsData = [
     {
-        images: [asset, react, color], 
-        type: "Site vitrine",
-        title: "Merliweb",
-        description: "Un site e-commerce innovant conçu pour maximiser l’expérience d’achat..."
+        images: [ohmylunch1, ohmylunch2, ohmylunch3], 
+        type: "Site de réservation",
+        title: "ohmylunch",
+        description: "Plateforme pour choisir et composer son menu en restaurant."
     },
     {
-        images: [react, asset, asset],
-        type: "Application mobile",
-        title: "App Foodies",
-        description: "Une application mobile permettant aux utilisateurs de commander des plats en ligne..."
+        images: [baratto1, baratto2, baratto3, baratto4],
+        type: "Site Vitrine",
+        title: "Baratto Precision",
+        description: "Site vitrine pour une entreprise d'impression 3D"
     },
     {
         images: [color, asset, asset],
@@ -127,9 +133,12 @@ const ProjetsPage = () => {
             {selectedProject && selectedProject.images?.length > 0 && (
                 <div className="modal" onClick={closeModal}>
                     <div className="modalContent" onClick={(e) => e.stopPropagation()}>
-                        <img src={cross} className="closeButton" alt="closeButton" onClick={closeModal} />
-                        <h2>{selectedProject.title}</h2>
-                        <p>{selectedProject.description}</p>
+                        <div className='modalContentText'>
+                            <img src={cross} className="closeButton" alt="closeButton" onClick={closeModal} />
+                            <h2>{selectedProject.title}</h2>
+                            <p>{selectedProject.description}</p>
+
+                        </div>
                         
                         <div className="carousel">
                             {selectedProject.images.length > 1 && (

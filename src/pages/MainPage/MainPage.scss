@@ -159,18 +159,10 @@
         line-height: $line-text;
     }
     
-    h2{
+    .mainProjetsTitle{
         font-size: $font-size-xxl;
         font-weight: $font-weight-bold;
         margin-top: 0.5rem;
-    }
-
-    .mainProjet{
-        width: 100%;
-        height: 300px;
-        background-color: $color-gray-light;
-        border-radius: 20px;
-        margin-top: 1rem;
     }
 
     .mainProjetsButton {
