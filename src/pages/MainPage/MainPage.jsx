@@ -181,34 +181,6 @@ const MainPage = () => {
                                 <img src={cross} className="closeButton" alt="closeButton" onClick={closeModal} />
                                 <h2>{selectedProject.title}</h2>
                                 <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
                                 <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
                                     <p className='modalLink'>Voir le projet</p>
                                 </a>
