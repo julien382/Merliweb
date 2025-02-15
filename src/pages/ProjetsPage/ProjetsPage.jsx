@@ -10,8 +10,10 @@ import baratto1 from "../../assets/projets/baratto/baratto1.png";
 import baratto2 from "../../assets/projets/baratto/baratto2.png";
 import baratto3 from "../../assets/projets/baratto/baratto3.png";
 import baratto4 from "../../assets/projets/baratto/baratto4.png";
+import reelHenson1 from "../../assets/projets/reelHenson/reelHenson1.jpg";
+import reelHenson2 from "../../assets/projets/reelHenson/reelHenson2.jpg";
+import reelHenson3 from "../../assets/projets/reelHenson/reelHenson3.jpg";
 import asset from "../../assets/undraw/asset.svg";
-import color from "../../assets/undraw/color.svg";
 import cross from "../../assets/cross.svg";
 import chevronLeft from "../../assets/chevronLeft.svg";
 import chevronRight from "../../assets/chevronRight.svg";
@@ -32,10 +34,11 @@ const projetsData = [
         link: "https://barattoprecision.com/"
     },
     {
-        images: [color, asset, asset],
-        type: "E-commerce",
-        title: "ShopNow",
-        description: "Un site e-commerce moderne et optimisé pour la conversion..."
+        images: [reelHenson1, reelHenson2, reelHenson3],
+        type: "Reel",
+        title: "Henson",
+        description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
+        link: "https://www.instagram.com/eehensonlamolieredeberck/"
     },
     {
         images: [asset, asset, asset],

@@ -7,6 +7,9 @@ import baratto1 from "../../assets/projets/baratto/baratto1.png";
 import baratto2 from "../../assets/projets/baratto/baratto2.png";
 import baratto3 from "../../assets/projets/baratto/baratto3.png";
 import baratto4 from "../../assets/projets/baratto/baratto4.png";
+import reelHenson1 from "../../assets/projets/reelHenson/reelHenson1.jpg";
+import reelHenson2 from "../../assets/projets/reelHenson/reelHenson2.jpg";
+import reelHenson3 from "../../assets/projets/reelHenson/reelHenson3.jpg";
 import building from "../../assets/undraw/building.svg";
 import programming from "../../assets/undraw/programming.svg";
 import studio from "../../assets/undraw/studio.svg";
@@ -35,10 +38,11 @@ const projetsData = [
         link: "https://barattoprecision.com/"
     },
     {
-        images: [studio, programming, building],
-        type: "E-commerce",
-        title: "ShopNow",
-        description: "Un site e-commerce moderne et optimisé pour la conversion..."
+        images: [reelHenson1, reelHenson2, reelHenson3],
+        type: "Reel",
+        title: "Henson",
+        description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
+        link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
     }
 ];
 
