@@ -56,41 +56,6 @@ body {
   min-width: 320px; // Ajuster la largeur minimale pour mobile
   min-height: 100vh;
   overflow-x: hidden; // Empêcher le dépassement horizontal
-}#app {
-  position: relative; // Permet de positionner l'effet correctement
-  overflow: hidden; // Évite les débordements de l'effet flou
-
-  &::before {
-      content: "";
-      position: absolute;
-      top: -100px; // Ajustement pour bien couvrir le haut
-      left: 50%;
-      width: 600px; // Augmenté pour couvrir un maximum de surface
-      height: 600px;
-      background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
-      filter: blur(200px); // Flou plus large pour un effet diffus
-      border-radius: 50%;
-      transform: translateX(-50%);
-      z-index: -1; // Derrière le contenu
-  }
-}
-#app {
-  position: relative; // Permet de positionner l'effet correctement
-  overflow: hidden; // Évite les débordements de l'effet flou
-
-  &::before {
-      content: "";
-      position: absolute;
-      top: -100px; // Ajustement pour bien couvrir le haut
-      left: 50%;
-      width: 600px; // Augmenté pour couvrir un maximum de surface
-      height: 600px;
-      background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
-      filter: blur(200px); // Flou plus large pour un effet diffus
-      border-radius: 50%;
-      transform: translateX(-50%);
-      z-index: -1; // Derrière le contenu
-  }
 }
 #app {
   position: relative; // Permet de positionner l'effet correctement
@@ -100,7 +65,7 @@ body {
       content: "";
       position: absolute;
       top: -300px; // Ajustement pour bien couvrir le haut
-      left: -100px;
+      left: -400px;
       width: 600px; // Augmenté pour couvrir un maximum de surface
       height: 600px;
       background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
