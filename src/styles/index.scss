@@ -19,6 +19,7 @@ $font-size-lg: 1.125rem;  // 18px
 $font-size-xl: 1.5rem;    // 24px
 $font-size-xxl: 2rem;     // 32px
 $font-size-xxxl: 2.5rem;  // 40px
+$font-size-xxxxl: 4rem;   // 64px
 
 $font-weight-thin: 100;
 $font-weight-extra-light: 200;
@@ -87,6 +88,6 @@ main {
   @media (min-width: 768px) {
     margin: 0 auto;
     margin-top: 100PX;
-    max-width: 1000px;
+    max-width: 1200px;
   }
 }

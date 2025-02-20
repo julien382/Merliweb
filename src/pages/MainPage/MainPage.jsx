@@ -93,11 +93,13 @@ const MainPage = () => {
         <div className="mainPage">
 
             <div className="mainAbove">
-                <h1>Surfez sur la vague du digital avec Merliweb</h1>
-                <p>{"L'agence qui donne vie à votre présence en ligne."}</p>
-                <Link to="/contact">
-                    <button className="submitButton">Contactez-Nous</button>
-                </Link>
+                <span className='contentTextMainAbove'>
+                    <h1>Surfez sur la vague du digital avec Merliweb</h1>
+                    <p>{"L'agence qui donne vie à votre présence en ligne."}</p>
+                    <Link to="/contact">
+                        <button className="submitButton">Contactez-Nous</button>
+                    </Link>
+                </span>
                 <img src={building} className="mainAboveImage" alt="mainAboveImage" />
             </div>
 
@@ -135,21 +137,23 @@ const MainPage = () => {
             <div className='mainTemoignages'>
                 <p>Témoignages</p>
                 <h2>Ce que disent nos clients</h2>
-                <div className='mainTemoignage'>
-                    <img src={programming} className="mainTemoignageImage" alt="mainTemoignageImage" />
-                    <h3 className='mainTemoignageName'>Andrew Rathore</h3>
-                    <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
-                </div>
-                <div className='mainTemoignage'>
-                    <img src={programming} className="mainTemoignageImage" alt="mainTemoignageImage" />
-                    <h3 className='mainTemoignageName'>Vera Duncan</h3>
-                    <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
-                </div>
-                <div className='mainTemoignage'>
-                    <img src={programming} className="mainTemoignageImage" alt="mainTemoignageImage" />
-                    <h3 className='mainTemoignageName'>Mark Smith</h3>
-                    <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
-                </div>
+                <span className='contentMainTemoignage'>
+                    <div className='mainTemoignage'>
+                        <img src={programming} className="mainTemoignageImage" alt="mainTemoignageImage" />
+                        <h3 className='mainTemoignageName'>Andrew Rathore</h3>
+                        <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+                    </div>
+                    <div className='mainTemoignage'>
+                        <img src={programming} className="mainTemoignageImage" alt="mainTemoignageImage" />
+                        <h3 className='mainTemoignageName'>Vera Duncan</h3>
+                        <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+                    </div>
+                    <div className='mainTemoignage'>
+                        <img src={programming} className="mainTemoignageImage" alt="mainTemoignageImage" />
+                        <h3 className='mainTemoignageName'>Mark Smith</h3>
+                        <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+                    </div>
+                </span>
             </div>
 
             <div className='mainActionContact'>

@@ -26,6 +26,41 @@
     }
 }
 
+@media (min-width: 1024px) {
+    .mainAbove {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        
+        .contentTextMainAbove {
+            // flex-direction: row; // Remove this
+            // align-items: center; // Remove this
+            // justify-content: space-between; // Remove this
+            h1 {
+                font-size: $font-size-xxxxl;
+                width: 70%;
+            }
+
+            p {
+                font-size: $font-size-lg;
+                max-width: 600px;
+            }
+        }
+      
+        .submitButton {
+            font-size: $font-size-md;
+            margin-top: 1rem; // Add margin-top
+          }
+      
+        .mainAboveImage {
+            margin-top: 0;
+            width:100%; // Adjust image width
+          }
+        }
+    
+}
+
+
 .mainService{
     display: flex;
     flex-direction: column;
@@ -115,6 +150,58 @@
         }
     }
 
+}
+
+@media (min-width: 1024px) {
+    .mainTemoignages {
+
+        p{
+            font-size: $font-size-md;
+        }
+
+        h2 {
+            font-size: $font-size-xxxl;
+            margin-bottom: 3rem;
+        }
+
+        .contentMainTemoignage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem; // Espacement entre les témoignages
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .mainTemoignage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+            width: 25%;
+            padding: 2rem;
+
+            .mainTemoignageImage {
+                width: 120px;
+                margin-bottom: 1rem;
+            }
+
+            .mainTemoignageName {
+                font-size: $font-size-lg;
+                font-weight: $font-weight-bold;
+            }
+
+            .mainTemoignageText {
+                font-size: $font-size-md;
+            }
+        }
+
+        /* Agrandir celui du milieu */
+        .mainTemoignage:nth-child(2) {
+            width: 25%; // Plus grand que ceux sur les côtés
+            transform: scale(1.1); // Effet d'agrandissement
+        }
+    }
 }
 
 .mainActionContact{
