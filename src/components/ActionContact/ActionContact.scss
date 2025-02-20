@@ -45,3 +45,38 @@
         padding: 1rem 2rem;
     }
 }
+
+@media (min-width: 1024px) {
+    .actionContact {
+          flex-direction: row; // Change to row direction
+          align-items: center; // Align items vertically in the center
+          justify-content: space-between; // Distribute space between image and text
+          padding: 4rem 4rem; // Increase padding
+  
+          &::before {
+              width: 60%; // Adjust width for larger screens
+              height: 100%; // Cover full height
+              left: 0; // Align to the left
+              bottom: 0; // Align to the bottom
+          }
+  
+        .actionContactImage {
+              width: 50%; // Adjust image width
+              margin-right: 2rem; // Add space between image and text
+          }
+  
+        .contentTextActionContact {
+              text-align: left; // Align text to the left
+              width: 45%;
+          }
+  
+          h2 {
+              font-size: $font-size-xxxl; // Increase heading size
+          }
+  
+        .actionContactText {
+              font-size: $font-size-lg; // Increase text size
+              margin-top: 1.5rem; // Add more space above text
+          }
+      }
+  }
