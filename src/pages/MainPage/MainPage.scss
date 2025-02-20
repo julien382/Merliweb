@@ -47,9 +47,9 @@
             position: absolute;
             top: 150px; // Ajustement pour bien couvrir le haut
             right: -100px;
-            width: 300px; // Augmenté pour couvrir un maximum de surface
-            height: 300px;
-            background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
+            width: 100%; // Augmenté pour couvrir un maximum de surface
+            height: 50%;
+            background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
             filter: blur(150px); // Flou plus large pour un effet diffus
             border-radius: 50%;
             z-index: -1; // Derrière le contenu
@@ -137,9 +137,9 @@
         top: 50%; // Ajustement pour bien couvrir le haut
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 300px; // Augmenté pour couvrir un maximum de surface
-        height: 300px;
-        background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
+        width: 50%; // Augmenté pour couvrir un maximum de surface
+        height: 50%;
+        background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
         filter: blur(150px); // Flou plus large pour un effet diffus
         border-radius: 50%;
         z-index: -1; // Derrière le contenu
@@ -195,9 +195,9 @@
         top: 50%; // Ajustement pour bien couvrir le haut
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 300px; // Augmenté pour couvrir un maximum de surface
-        height: 600px;
-        background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
+        width: 70%; // Augmenté pour couvrir un maximum de surface
+        height: 80%;
+        background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
         filter: blur(150px); // Flou plus large pour un effet diffus
         border-radius: 50%;
         z-index: -1; // Derrière le contenu
