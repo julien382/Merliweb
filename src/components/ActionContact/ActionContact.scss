@@ -9,6 +9,23 @@
     border-radius: 20px;
     padding: 1.5rem;
     margin-top: 5rem;
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%; // Ajustement pour bien couvrir le haut
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px; // Augmenté pour couvrir un maximum de surface
+        height: 200px;
+        background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
+        filter: blur(150px); // Flou plus large pour un effet diffus
+        border-radius: 50%;
+        z-index: -1; // Derrière le contenu
+    }
 
     .actionContactImage{
         width: 100%;
