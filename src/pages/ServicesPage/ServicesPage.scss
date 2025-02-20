@@ -6,6 +6,18 @@
     align-items: center;
     text-align: center;
     margin-top: 5rem;
+    position: relative; // Permet de positionner l'effet correctement
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50%; // Augmenté pour couvrir un maximum de surface
+        height: 100%;
+        background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
+        filter: blur(150px); // Flou plus large pour un effet diffus
+        border-radius: 50%;
+        z-index: -1; // Derrière le contenu
+    }
 
     p{
         font-size: $font-size-sm;
