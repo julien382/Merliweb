@@ -5,6 +5,7 @@
   border-radius: 20px;
   padding: 1.5rem;
   margin-bottom: 20px;
+  overflow: hidden;
 
   h1 {
     font-size: $font-size-xxxl;
@@ -91,8 +92,25 @@
   margin-top: 5px;
 }
 
+.contentImageContact {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%; // Ajuste selon l'effet désiré
+    height: 100%;
+    background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
+    filter: blur(100px); // Flou diffus
+    border-radius: 50%;
+    z-index: 0; // Derrière l'image
+  }
+}
+
 .imageContact {
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 100%;
+  position: relative;
+  z-index: 1; // Met l’image devant
 }

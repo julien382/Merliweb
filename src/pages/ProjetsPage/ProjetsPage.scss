@@ -18,6 +18,23 @@
         margin-top: 0.5rem;
     }
 
+    .projetsGrid{
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%; // Augmenté pour couvrir un maximum de surface
+            height: 100%;
+            background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
+            filter: blur(100px); // Flou plus large pour un effet diffus
+            border-radius: 50%;
+            z-index: -1; // Derrière le contenu
+        }
+    }
+
     .projetsButton {
         padding: 1rem 2.5rem;
         background-color: $color-primary;

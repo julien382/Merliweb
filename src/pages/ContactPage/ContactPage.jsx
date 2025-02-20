@@ -89,8 +89,10 @@ const ContactPage = () => {
                 </Link>
             </div>
         </div>
-
-        <img src={contact} className="imageContact" alt="Merliweb Logo" />
+        
+        <div className="contentImageContact">
+            <img src={contact} className="imageContact" alt="Merliweb Logo" />
+        </div>
 
         <div className="contactForm">
             {submitted ? (
