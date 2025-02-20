@@ -101,8 +101,8 @@
     position: absolute;
     width: 100%; // Ajuste selon l'effet désiré
     height: 100%;
-    background: rgba(65, 143, 153, 0.3); // Bleu-vert #418F99 avec transparence
-    filter: blur(100px); // Flou diffus
+    background: rgba(65, 143, 153, 0.2); // Bleu-vert #418F99 avec transparence
+    filter: blur(50px); // Flou diffus
     border-radius: 50%;
     z-index: -1; // Derrière l'image
   }
