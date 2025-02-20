@@ -106,22 +106,28 @@ const MainPage = () => {
                     <h2>Vous cherchez à développer votre présence en ligne et à attirer plus de clients ?</h2>
                     <p>Merliweb vous accompagne dans la création de votre site web et la gestion de votre communication digitale.
                     Nous vous aidons à optimiser votre visibilité, à capter l’attention de votre audience et à générer des conversions grâce à des solutions modernes et performantes.</p>
-                    <img src={arrowBottom} className="arrow" alt="arrow" />
+                    <span className='arrowLinkMain'>
+                        <img src={arrowBottom} className="arrow" alt="arrow" />    
+                    </span>
                 </div>
                 <div className='containerTextMainService'>
                     <h2>Création de sites web sur-mesure</h2>
                     <p>{"Nous concevons des sites web modernes, fonctionnels et responsive qui s'adaptent à tous vos besoins. Que vous ayez besoin d'un site vitrine, e-commerce, ou blog."}</p>
-                    <Link to="/services">
-                        <img src={arrowRight} className="arrow" alt="arrow" />
-                    </Link>
+                    <span className='arrowLinkMain'>
+                        <Link to="/services">
+                            <img src={arrowRight} className="arrow" alt="arrow" />
+                        </Link>
+                    </span>
                     <img src={programming} className="mainServiceImage" alt="programming" />
                 </div>
                 <div className='containerTextMainService flouMainCreationcontenu'>
                     <h2>Création de contenu et gestion des réseaux sociaux</h2>
                     <p>De la photo à la vidéo, en passant par le drone et la GoPro, nous créons du contenu sur mesure et gérons vos réseaux pour maximiser votre impact digital.</p>
-                    <Link to="/services">
-                        <img src={arrowRight} className="arrow" alt="arrow" />
-                    </Link>
+                    <span className='arrowLinkMain'>
+                        <Link to="/services">
+                            <img src={arrowRight} className="arrow" alt="arrow" />
+                        </Link>
+                    </span>
                     <img src={studio} className="mainServiceImage" alt="mainServiceImage" />
                 </div>
             </div>
