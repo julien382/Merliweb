@@ -37,3 +37,25 @@
         background-color: #cc582f;
     }
 }
+
+@media (min-width: 1024px) {
+    .errorPage {
+        height: 100%;
+    }
+
+    .errorImage {
+        width: 50%; 
+        padding-top: 0rem;
+        padding-bottom: 2rem;
+    }
+
+    .errorTitle {
+        font-size: $font-size-xxl;
+        padding-bottom: 2rem;
+    }
+
+    .homeLink {
+        font-size: $font-size-md;
+        padding: 1.2rem 2rem;
+    }
+}

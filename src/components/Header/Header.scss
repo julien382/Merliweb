@@ -114,10 +114,25 @@
         background: transparent;
         box-shadow: none;
         width: auto;
+        padding: 0;
 
         ul {
             flex-direction: row;
-            gap: 2rem;
+            gap: 3rem;
         }
+        
+        ul li a {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-regular;
+        }
+    }   
+
+    .header {
+        padding: 1rem 5rem;
     }
+    
+    .logo {
+        height: 50px;
+    }
+
 }
