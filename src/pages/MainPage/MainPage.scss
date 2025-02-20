@@ -39,6 +39,23 @@
         align-items: center;
     }
 
+    .flouMainCreationcontenu{
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 150px; // Ajustement pour bien couvrir le haut
+            right: -100px;
+            width: 300px; // Augmenté pour couvrir un maximum de surface
+            height: 300px;
+            background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
+            filter: blur(150px); // Flou plus large pour un effet diffus
+            border-radius: 50%;
+            z-index: -1; // Derrière le contenu
+        }
+    }
+
     h2{
         font-size: $font-size-xxl;
         font-weight: $font-weight-bold;
@@ -110,6 +127,23 @@
     background-color: $color-gray-light;
     border-radius: 20px;
     padding: 1.5rem;
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%; // Ajustement pour bien couvrir le haut
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px; // Augmenté pour couvrir un maximum de surface
+        height: 300px;
+        background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
+        filter: blur(150px); // Flou plus large pour un effet diffus
+        border-radius: 50%;
+        z-index: -1; // Derrière le contenu
+    }
 
     h2{
         font-size: $font-size-xxl;
@@ -153,6 +187,21 @@
     align-items: center;
     text-align: center;
     margin-top: 5rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%; // Ajustement pour bien couvrir le haut
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px; // Augmenté pour couvrir un maximum de surface
+        height: 600px;
+        background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
+        filter: blur(150px); // Flou plus large pour un effet diffus
+        border-radius: 50%;
+        z-index: -1; // Derrière le contenu
+    }
 
     p{
         font-size: $font-size-sm;

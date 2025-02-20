@@ -116,7 +116,7 @@ const MainPage = () => {
                     </Link>
                     <img src={programming} className="mainServiceImage" alt="programming" />
                 </div>
-                <div className='containerTextMainService'>
+                <div className='containerTextMainService flouMainCreationcontenu'>
                     <h2>Création de contenu et gestion des réseaux sociaux</h2>
                     <p>De la photo à la vidéo, en passant par le drone et la GoPro, nous créons du contenu sur mesure et gérons vos réseaux pour maximiser votre impact digital.</p>
                     <Link to="/services">
