@@ -40,6 +40,20 @@
     background-color: $color-gray-light;
     border-radius: 20px;
     padding: 1.5rem;
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%; // Augmenté pour couvrir un maximum de surface
+        height: 50%;
+        background: rgba(65, 143, 153, 0.2); // Bleu-vert #418F99 avec transparence
+        filter: blur(100px); // Flou plus large pour un effet diffus
+        border-radius: 50%;
+        z-index: -1; // Derrière le contenu
+    }
 
     h2{
         font-size: $font-size-xxl;
