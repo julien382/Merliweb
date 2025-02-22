@@ -12,7 +12,7 @@
     &::before {
         content: "";
         position: absolute;
-        width: 50%; // Augmenté pour couvrir un maximum de surface
+        width: 100%; // Augmenté pour couvrir un maximum de surface
         height: 100%;
         background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
         filter: blur(150px); // Flou plus large pour un effet diffus
@@ -29,6 +29,12 @@
         font-size: $font-size-xxl;
         font-weight: $font-weight-bold;
         margin-top: 0.5rem;
+    }
+
+    .containerServiceWeb{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -89,5 +95,29 @@
     .submitButton {
         padding: 1rem 2rem;
         margin-top: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {   
+
+    .servicesWeb{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 7rem;
+        position: relative;
+
+        .containerServiceWeb {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); // 3 projets par ligne
+            gap: 4rem; // Espacement entre les projets
+            justify-content: center;
+            align-items: start;
+            text-align: center;
+            width: 100%; // Ajuste la largeur pour bien centrer
+            margin-top: 3rem;
+        }
     }
 }

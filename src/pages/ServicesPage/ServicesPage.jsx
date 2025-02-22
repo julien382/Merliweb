@@ -25,20 +25,24 @@ const ServicesPage = () => {
             <div className='servicesWeb'>
                 <p>Développement Web</p>
                 <h2>Découvrez nos services Web</h2>
-                <ServiceWeb img={designer} title={"Design UX/UI"} text={"Création d’interfaces modernes et ergonomiques"}/>
-                <ServiceWeb img={shopping} title={"Développement de sites web"} text={"Sites vitrines, e-commerce, portfolios, blogs, Applications web"}/>
-                <ServiceWeb img={device} title={"Responsive Design"} text={"Sites adaptés à toutes les tailles d’écran (mobile, tablette, ordinateur)"}/>
-                <ServiceWeb img={react} title={"Développement personnalisé"} text={"Nous codons votre site de A à Z en react. pour garantir performance et fluidité."}/>
-                <ServiceWeb img={projections} title={"Référencement SEO"} text={"Optimisation pour Google et les moteurs de recherche"}/>
-                <ServiceWeb img={fastLoading} title={"Maintenance & mises à jour"} text={"Sécurisation, optimisation et évolution du site"}/>
+                <span className='containerServiceWeb'>
+                    <ServiceWeb img={designer} title={"Design UX/UI"} text={"Création d’interfaces modernes et ergonomiques"}/>
+                    <ServiceWeb img={shopping} title={"Développement de sites web"} text={"Sites vitrines, e-commerce, portfolios, blogs, Applications web"}/>
+                    <ServiceWeb img={device} title={"Responsive Design"} text={"Sites adaptés à toutes les tailles d’écran (mobile, tablette, ordinateur)"}/>
+                    <ServiceWeb img={react} title={"Développement personnalisé"} text={"Nous codons votre site de A à Z en react. pour garantir performance et fluidité."}/>
+                    <ServiceWeb img={projections} title={"Référencement SEO"} text={"Optimisation pour Google et les moteurs de recherche"}/>
+                    <ServiceWeb img={fastLoading} title={"Maintenance & mises à jour"} text={"Sécurisation, optimisation et évolution du site"}/>
+                </span>
             </div>
 
             <div className='servicesWeb'>
                 <p>Communication</p>
                 <h2>Découvrez nos services de communication</h2>
-                <ServiceWeb img={drone} title={"Production Visuelle"} text={"Vidéos, photos, prises de vue aériennes avec drone, création de visuels professionnels."}/>
-                <ServiceWeb img={socialDashboard} title={"Stratégie & Gestion Digitale"} text={"Gestion des réseaux sociaux, création de contenu, campagnes publicitaires."}/>
-                <ServiceWeb img={color} title={"Identité Visuelle & Branding"} text={"Conception de logos, chartes graphiques, création de supports de communication."}/>
+                <span className='containerServiceWeb'>
+                    <ServiceWeb img={drone} title={"Production Visuelle"} text={"Vidéos, photos, prises de vue aériennes avec drone, création de visuels professionnels."}/>
+                    <ServiceWeb img={socialDashboard} title={"Stratégie & Gestion Digitale"} text={"Gestion des réseaux sociaux, création de contenu, campagnes publicitaires."}/>
+                    <ServiceWeb img={color} title={"Identité Visuelle & Branding"} text={"Conception de logos, chartes graphiques, création de supports de communication."}/>
+                </span>
             </div>
 
             <div className='servicesWebContact'>
