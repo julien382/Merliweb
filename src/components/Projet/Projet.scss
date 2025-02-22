@@ -38,8 +38,11 @@
                 line-height: $line-low;
             }
         }
-
-        
     }
-    
+}
+
+@media (min-width: 1024px) {
+    .projet{
+        margin-top: 0rem;
+    }
 }

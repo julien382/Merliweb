@@ -170,15 +170,17 @@ const MainPage = () => {
             <div className='mainProjets'>
                 <p>Nos Projets</p>
                 <h2 className='mainProjetsTitle'>Découvrez nos réalisations</h2>
-                {projetsData.map((project, index) => (
-                    <Projet 
-                        key={index} 
-                        img={project.images?.[0]} // Afficher la première image par défaut
-                        type={project.type} 
-                        title={project.title} 
-                        onClick={() => handleClick(project)}
-                    />
-                ))}
+                <span className='containerMainProjets'>
+                    {projetsData.map((project, index) => (
+                        <Projet 
+                            key={index} 
+                            img={project.images?.[0]} // Afficher la première image par défaut
+                            type={project.type} 
+                            title={project.title} 
+                            onClick={() => handleClick(project)}
+                        />
+                    ))}
+                </span>
                 <Link to="/projets">
                     <button className="mainProjetsButton">Voir Plus</button>
                 </Link>
