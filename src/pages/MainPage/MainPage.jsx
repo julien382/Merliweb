@@ -44,12 +44,40 @@ const projetsData = [
         title: "Henson",
         description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
         link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
+    },
+    {
+        images: [ohmylunch1, ohmylunch2, ohmylunch3], 
+        type: "Site de réservation",
+        title: "ohmylunch",
+        description: "Plateforme pour choisir et composer son menu en restaurant.",
+        link: "https://julien382.github.io/ohmylunch/"
+    },
+    {
+        images: [baratto1, baratto2, baratto3, baratto4],
+        type: "Site Vitrine",
+        title: "Baratto Precision",
+        description: "Site vitrine pour une entreprise d'impression 3D",
+        link: "https://barattoprecision.com/"
+    },
+    {
+        images: [reelHenson1, reelHenson2, reelHenson3],
+        type: "Reel",
+        title: "Henson",
+        description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
+        link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
     }
 ];
 
 const MainPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setScreenWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     // Désactiver le scroll lorsque la modale est ouverte
     useEffect(() => {
@@ -171,7 +199,9 @@ const MainPage = () => {
                 <p>Nos Projets</p>
                 <h2 className='mainProjetsTitle'>Découvrez nos réalisations</h2>
                 <span className='containerMainProjets'>
-                    {projetsData.map((project, index) => (
+                    {projetsData
+                    .slice(0, screenWidth >= 1024 ? 6 : 3) // Affiche 3 sur mobile et 6 sur PC
+                    .map((project, index) => (
                         <Projet 
                             key={index} 
                             img={project.images?.[0]} // Afficher la première image par défaut
