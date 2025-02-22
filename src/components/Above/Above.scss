@@ -9,15 +9,16 @@
     .aboveImage {
         width: 100%;
     }
-
+    
     h1{
         font-size: $font-size-xxxl;
         font-weight: $font-weight-bold;
         margin-top: 2rem;
     }
-
+    
     p{
         font-size: $font-size-md;
+        line-height: $line-text;
         margin-top: 1rem;
     }
 
