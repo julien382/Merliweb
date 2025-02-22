@@ -26,5 +26,14 @@
 
     .serviceWeb{
         width: 100%;
+
+        .serviceWebName{
+            font-size: $font-size-xl;
+        }
+    
+        .serviceWebText{
+            font-size: $font-size-sm;
+        }
     }
+
 }

@@ -109,6 +109,14 @@
         margin-bottom: 7rem;
         position: relative;
 
+        p{
+            font-size: $font-size-md;
+        }
+        
+        h2{
+            font-size: $font-size-xxxl;
+        }
+
         .containerServiceWeb {
             display: grid;
             grid-template-columns: repeat(3, 1fr); // 3 projets par ligne
