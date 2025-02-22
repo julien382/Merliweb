@@ -5,9 +5,13 @@ import arrowBottom from "../../assets/arrowBottom.svg";
 const Above = ({ img, title, text }) => {
     return (
         <div className="above">
-            <img src={img} className="aboveImage" alt="mainAboveImage" />
-            <h1>{title}</h1>
-            <p>{text}</p>
+            <span className='containerAbove'>
+                <img src={img} className="aboveImage" alt="mainAboveImage" />
+                <span className='aboveText'>
+                    <h1>{title}</h1>
+                    <p>{text}</p>
+                </span>
+            </span>
             <img src={arrowBottom} className="arrow" alt="arrow" />
         </div>
     )
