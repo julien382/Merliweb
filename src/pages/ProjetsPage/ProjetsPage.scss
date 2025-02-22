@@ -55,6 +55,18 @@
     }
 }
 
+@media (min-width: 1024px) {
+    .projetsGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 projets par ligne
+        gap: 2rem; // Espacement entre les projets
+        justify-content: center;
+        align-items: stretch;
+        width: 100%; // Ajuste la largeur pour bien centrer
+        margin-top: 3rem;
+    }
+}
+
 .modal {
     position: fixed;
     top: 0;
