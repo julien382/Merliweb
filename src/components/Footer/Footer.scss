@@ -42,3 +42,65 @@ footer {
     color: $color-blue-dark;
     font-weight: $font-weight-light;
 }
+
+@media (min-width: 1024px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        background-color: $color-gray-light;
+        color: $color-blue-dark;
+        font-size: $font-size-md;
+        font-weight: $font-weight-light;
+    }
+
+    .footerInfos{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: start;
+        justify-content: space-around;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        gap: 10rem;
+    }
+    
+    .FooterNameType{
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        margin-bottom: 0.5rem;
+    }
+    
+    .containerContact, .containerMedia, .containerLocalisation, .containerCopyright {
+        margin-top: 0rem;
+        margin: 0rem;
+    }
+
+    .containerEntreprise{
+        margin: 0rem;
+    }
+    
+    .containerEntreprise, .containerContact, .containerMedia, .containerLocalisation, .containerCopyright{
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    
+    .containerContact a, .containerMedia a, .containerLocalisation a{
+        color: $color-blue-dark;
+        font-weight: $font-weight-light;
+    }
+    
+    .containerCopyright{
+        gap: 0.23em;
+    }
+    
+    .copyrightLink{
+        color: $color-blue-dark;
+        font-weight: $font-weight-light;
+    }
+
+}
