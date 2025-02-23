@@ -44,122 +44,133 @@ const ContactPage = () => {
 
   return (
     <div className="contactPage">
-        <h1>Contactez-</h1>
-        <h1>Nous</h1>
+        <div className="contactContainerTitleSocial">
+            <div className="contactPageTitle">
+                <h1>Contactez-</h1>
+                <h1>Nous</h1>
+            </div>
 
-        <div className='contactSocialMedia'>
-            <Link to="https://www.linkedin.com/in/julien-hermain/">
-                <img src={linkedin} className="logoSocialMedia" alt="arrow" />
-            </Link>
-            <Link to="https://www.linkedin.com/in/julien-hermain/">
-                <img src={facebook} className="logoSocialMedia" alt="arrow" />
-            </Link>
-            <Link to="https://www.linkedin.com/in/julien-hermain/">
-                <img src={insta} className="logoSocialMedia" alt="arrow" />
-            </Link>
-            <Link to="https://www.linkedin.com/in/julien-hermain/">
-                <img src={tiktok} className="logoSocialMedia" alt="arrow" />
-            </Link>
-        </div>
-
-
-        <div className='contactInfo'>
-            <div className='containerLocalisation'>
-                <p className='FooterNameType'>Localisation</p>
+            <div className='contactSocialMedia'>
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <p>Hauts-De-France</p>
+                    <img src={linkedin} className="logoSocialMedia" alt="arrow" />
                 </Link>
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <p>Merlimont</p>
+                    <img src={facebook} className="logoSocialMedia" alt="arrow" />
                 </Link>
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <p>Berck</p>
+                    <img src={insta} className="logoSocialMedia" alt="arrow" />
                 </Link>
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <p>Le Touquet</p>
+                    <img src={tiktok} className="logoSocialMedia" alt="arrow" />
                 </Link>
             </div>
-            <div className='containerContact'>
-                <p className='FooterNameType'>Contact</p>
-                <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <p>Merliweb@*****.**</p>
-                </Link>
-                <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <p>06 ** ** ** **</p>
-                </Link>
+
+        </div>
+
+        <div className="contactPageContent"> 
+            <div className="contactInfo">
+                <div className='contactContainerInfo'>
+                    <div className='containerLocalisation'>
+                        <p className='FooterNameType'>Localisation</p>
+                        <Link to="https://www.linkedin.com/in/julien-hermain/">
+                            <p>Hauts-De-France</p>
+                        </Link>
+                        <Link to="https://www.linkedin.com/in/julien-hermain/">
+                            <p>Merlimont</p>
+                        </Link>
+                        <Link to="https://www.linkedin.com/in/julien-hermain/">
+                            <p>Berck</p>
+                        </Link>
+                        <Link to="https://www.linkedin.com/in/julien-hermain/">
+                            <p>Le Touquet</p>
+                        </Link>
+                    </div>
+                    <div className='containerContact'>
+                        <p className='FooterNameType'>Contact</p>
+                        <Link to="https://www.linkedin.com/in/julien-hermain/">
+                            <p>Merliweb@*****.**</p>
+                        </Link>
+                        <Link to="https://www.linkedin.com/in/julien-hermain/">
+                            <p>06 ** ** ** **</p>
+                        </Link>
+                    </div>
+                </div>
+                <div className="contentImageContact">
+                    <img src={contact} className="imageContact" alt="Merliweb Logo" />
+                </div>
             </div>
-        </div>
-        
-        <div className="contentImageContact">
-            <img src={contact} className="imageContact" alt="Merliweb Logo" />
-        </div>
 
-        <div className="contactForm">
-            {submitted ? (
-            <p className="successMessage">Merci pour votre message !</p>
-            ) : (
-            <form onSubmit={handleSubmit} className="formContainer">
-                <div className="formGroup">
-                <label>Prénom</label>
-                <input
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    placeholder="Prénom"
-                />
-                {errors.firstName && <p className="error">{errors.firstName}</p>}
-                </div>
+            <div className="contactForm">
+                {submitted ? (
+                <p className="successMessage">Merci pour votre message !</p>
+                ) : (
+                <form onSubmit={handleSubmit} className="formContainer">
+                    <div className="formContent">
+                        <div className="formGroup">
+                        <label>Prénom</label>
+                        <input
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
+                            placeholder="Prénom"
+                        />
+                        {errors.firstName && <p className="error">{errors.firstName}</p>}
+                        </div>
 
-                <div className="formGroup">
-                <label>Nom</label>
-                <input
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    placeholder="Nom"
-                />
-                {errors.lastName && <p className="error">{errors.lastName}</p>}
-                </div>
+                        <div className="formGroup">
+                        <label>Nom</label>
+                        <input
+                            type="text"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
+                            placeholder="Nom"
+                        />
+                        {errors.lastName && <p className="error">{errors.lastName}</p>}
+                        </div>
 
-                <div className="formGroup">
-                <label>Email *</label>
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Email"
-                />
-                {errors.email && <p className="error">{errors.email}</p>}
-                </div>
+                        <div className="formGroup">
+                        <label>Email *</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="Email"
+                        />
+                        {errors.email && <p className="error">{errors.email}</p>}
+                        </div>
 
-                <div className="formGroup">
-                <label>Téléphone</label>
-                <input
-                    type="text"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="Téléphone"
-                />
-                </div>
+                        <div className="formGroup">
+                        <label>Téléphone</label>
+                        <input
+                            type="text"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="Téléphone"
+                        />
+                        </div>
 
-                <div className="formGroup">
-                <label>Message *</label>
-                <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Message"
-                />
-                {errors.message && <p className="error">{errors.message}</p>}
-                </div>
+                        <div className="formGroup groupe-message">
+                        <label>Message *</label>
+                        <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            placeholder="Message"
+                        />
+                        {errors.message && <p className="error">{errors.message}</p>}
+                        </div>
+                    </div>
 
-                <button type="submit" className="submitButton">ENVOYER</button>
-            </form>
-            )}
+                    <button type="submit" className="submitButton">ENVOYER</button>
+                    
+                </form>
+                )}
+            </div>
+
         </div>
 
     </div>

@@ -64,7 +64,7 @@ const ServicesPage = () => {
                             Nous analysons votre entreprise pour définir les solutions digitales parfaitement adaptées à vos besoins.
                         </p>
                         <p className="servicesWebText">
-                            <strong>Chaque projet est unique, c’est pourquoi nous vous proposons des options sur-mesure, en mettant l'accent sur ce qui vous correspond le mieux.</strong>
+                            <strong>{"Chaque projet est unique, c’est pourquoi nous vous proposons des options sur-mesure, en mettant l'accent sur ce qui vous correspond le mieux."}</strong>
                         </p>
                         <p className="servicesWebTextAction">
                             <em>Contactez-nous dès maintenant pour discuter de vos besoins et obtenir un devis personnalisé.</em>
