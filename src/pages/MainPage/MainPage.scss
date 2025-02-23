@@ -59,6 +59,26 @@
     
 }
 
+.mainDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+
+    h2{
+        font-size: $font-size-xxl;
+        font-weight: $font-weight-bold;
+        margin-top: 3rem;
+    }
+
+    p{
+        font-size: $font-size-sm;
+        margin-top: 1rem;
+        line-height: $line-text-xl;
+    }
+
+}
 
 .mainService{
     display: flex;
@@ -108,6 +128,65 @@
 
     .mainServiceImage{
         width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mainService{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+        margin-top: 5rem;
+    
+        .webMainService{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    
+        .textMainService{
+            width: 55%;
+            margin: 5rem;
+        }
+
+        .flouMainCreationcontenu{
+            flex-direction: row-reverse;
+            position: relative;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                top: 150px; // Ajustement pour bien couvrir le haut
+                right: -100px;
+                width: 100%; // Augmenté pour couvrir un maximum de surface
+                height: 50%;
+                background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
+                filter: blur(150px); // Flou plus large pour un effet diffus
+                border-radius: 50%;
+                z-index: -1; // Derrière le contenu
+            }
+        }
+    
+        h2{
+            font-size: $font-size-xxxl;
+            font-weight: $font-weight-bold;
+            margin-top: 3rem;
+        }
+    
+        p{
+            font-size: $font-size-md;
+            margin-top: 1rem;
+            line-height: $line-text-xl;
+        }
+    
+        .arrowMainService{
+            margin: 0rem;
+        }
+    
+        .mainServiceImage{
+            max-width: 450px;
+        }
     }
 }
 
