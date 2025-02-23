@@ -78,6 +78,26 @@
         line-height: $line-text-xl;
     }
 
+    .arrowMainService{
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mainDescription{
+
+        h2{
+            font-size: $font-size-xxxl;
+            font-weight: $font-weight-bold;
+            margin-top: 3rem;
+        }
+    
+        p{
+            font-size: $font-size-md;
+            margin-top: 1rem;
+            line-height: $line-text-xl;
+        }
+    }
 }
 
 .mainService{
@@ -122,8 +142,8 @@
         line-height: $line-text-xl;
     }
 
-    .arrowLinkMain{
-        margin: 2rem;
+    .arrowMainService{
+        margin: 1.5rem;
     }
 
     .mainServiceImage{
@@ -144,10 +164,14 @@
             flex-direction: row;
             align-items: center;
         }
-    
+        
         .textMainService{
             width: 55%;
             margin: 5rem;
+        }
+
+        .arrowMainService{
+            margin-left: 0rem;
         }
 
         .flouMainCreationcontenu{
@@ -180,9 +204,6 @@
             line-height: $line-text-xl;
         }
     
-        .arrowMainService{
-            margin: 0rem;
-        }
     
         .mainServiceImage{
             max-width: 450px;
