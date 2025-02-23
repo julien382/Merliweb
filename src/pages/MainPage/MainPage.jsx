@@ -71,10 +71,10 @@ const projetsData = [
 const MainPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
 
     useEffect(() => {
-        const handleResize = () => setScreenWidth(window.innerWidth);
+        const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
@@ -200,7 +200,7 @@ const MainPage = () => {
                 <h2 className='mainProjetsTitle'>Découvrez nos réalisations</h2>
                 <span className='containerMainProjets'>
                     {projetsData
-                    .slice(0, screenWidth >= 1024 ? 6 : 3) // Affiche 3 sur mobile et 6 sur PC
+                    .slice(0, isDesktop ? 6 : 3) // Affiche 3 sur mobile et 6 sur PC
                     .map((project, index) => (
                         <Projet 
                             key={index} 
