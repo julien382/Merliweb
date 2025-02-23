@@ -115,3 +115,31 @@ main {
   }
 
 }
+
+/* Style du bouton "Retour en haut" */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: $color-primary;
+  color: white;
+  border: none;
+  font-size: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Effet au survol du bouton "Retour en haut" */
+.back-to-top:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1024px) {
+  .back-to-top {
+    width: 60px;
+    height: 60px;
+  }
+}

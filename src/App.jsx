@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Header from "./components/Header/Header";
 import MainPage from "./pages/MainPage/MainPage";
@@ -9,12 +9,30 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import ProjetsPage from "./pages/ProjetsPage/ProjetsPage";
 
-function App() {
-  const location = useLocation(); // Récupère les infos sur la route actuelle
 
+function App() {
+  const location = useLocation();
+  const [showButton, setShowButton] = useState(false);
+
+  // Remonter en haut lorsqu'on change de page
   useEffect(() => {
-    window.scrollTo(0, 0); // Définit le défilement en haut de la page
-  }, [location.pathname]); // S'exécute chaque fois que l'URL change
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  // Gérer l'affichage du bouton "Retour en haut"
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > window.innerHeight); // Affiche si on dépasse l'écran
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Fonction pour remonter en haut
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div id="app">
@@ -29,6 +47,13 @@ function App() {
         </Routes>
       </main>
       <Footer />
+
+      {/* Bouton "Retour en haut" */}
+      {showButton && (
+        <button className="back-to-top" onClick={scrollToTop}>
+          ⬆ 
+        </button>
+      )}
 
     </div>
   );
