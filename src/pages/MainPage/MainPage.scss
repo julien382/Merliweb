@@ -38,7 +38,6 @@
             // justify-content: space-between; // Remove this
             h1 {
                 font-size: $font-size-xxxxl;
-                width: 70%;
             }
 
             p {
@@ -84,7 +83,7 @@
             right: -100px;
             width: 100%; // Augmenté pour couvrir un maximum de surface
             height: 50%;
-            background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
+            background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
             filter: blur(150px); // Flou plus large pour un effet diffus
             border-radius: 50%;
             z-index: -1; // Derrière le contenu
@@ -225,7 +224,7 @@
         transform: translate(-50%, -50%);
         width: 50%; // Augmenté pour couvrir un maximum de surface
         height: 50%;
-        background: rgba(65, 143, 153, 0.4); // Bleu-vert #418F99 avec transparence
+        background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
         filter: blur(150px); // Flou plus large pour un effet diffus
         border-radius: 50%;
         z-index: -1; // Derrière le contenu
