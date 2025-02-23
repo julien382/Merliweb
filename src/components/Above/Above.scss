@@ -3,8 +3,12 @@
 .above{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
+    height: calc(100vh - 132px);
+    box-sizing: border-box;
+    padding-bottom: 2rem;
     
     .aboveImage {
         width: 100%;
@@ -23,7 +27,7 @@
     }
 
     .arrowMainService{
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 }
 
@@ -32,7 +36,9 @@
         flex-direction: column; /* L'alignement passe en ligne pour les grands écrans */
         justify-content: space-between; /* Équilibre l'espace entre l'image et le texte */
         text-align: left; /* Aligner le texte à gauche */
-        padding: 2rem 3rem; /* Ajouter un peu de padding sur les côtés */
+        height: calc(100vh - 164px);
+        box-sizing: border-box;
+        padding: 5rem 0 2rem 0;
     }
 
     .containerAbove {
