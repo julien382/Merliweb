@@ -12,7 +12,9 @@ const Above = ({ img, title, text }) => {
                     <p>{text}</p>
                 </span>
             </span>
-            <img src={arrowBottom} className="arrow" alt="arrow" />
+            <div className='arrowMainService'>
+                <img src={arrowBottom} className="arrow" alt="arrow" />
+            </div>
         </div>
     )
 }
