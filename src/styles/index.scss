@@ -58,6 +58,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden; // Empêcher le dépassement horizontal
 }
+
 #app {
   position: relative; // Permet de positionner l'effet correctement
   overflow: hidden; // Évite les débordements de l'effet flou
@@ -90,5 +91,27 @@ main {
     margin-top: 100PX;
     margin-bottom: 50PX;
     max-width: 1000px;
+
+    
   }
+}
+@media (min-width: 1024px) {
+  #app {
+    position: relative; // Permet de positionner l'effet correctement
+    overflow: hidden; // Évite les débordements de l'effet flou
+  
+    &::before {
+        content: "";
+        position: absolute;
+        top: -300px; // Ajustement pour bien couvrir le haut
+        left: -400px;
+        width: 800px; // Augmenté pour couvrir un maximum de surface
+        height: 800px;
+        background: rgba(65, 143, 153, 0.6); // Bleu-vert #418F99 avec transparence
+        filter: blur(300px); // Flou plus large pour un effet diffus
+        border-radius: 50%;
+        z-index: -1; // Derrière le contenu
+    }
+  }
+
 }
