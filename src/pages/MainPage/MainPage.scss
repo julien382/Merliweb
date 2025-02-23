@@ -266,6 +266,36 @@
         margin-top: 1rem;
     }
 }
+@media (min-width: 1024px) {
+    .mainActionContact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 5rem;
+        padding: 2rem;
+        position: relative;
+        gap: 2.5rem;
+    
+        p{
+            font-size: $font-size-lg;
+        }
+        
+        h2{
+            font-size: $font-size-xxxl;
+        }
+        
+        .submitButton{
+            font-size: $font-size-md;
+        }
+    
+        .mainActionImage{
+            width: 100%;
+            margin-top: 0rem;
+        }
+    }
+    
+}
 
 .mainProjets{
     display: flex;
