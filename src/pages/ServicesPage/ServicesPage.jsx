@@ -90,16 +90,6 @@ const ServicesPage = () => {
                 </Link>
             </div>
             )}
-            <div className='servicesWebContact'>
-                <h2>Construisez votre projet digital avec nous !</h2>
-                <img src={social} className="servicesWebImage" alt="mainTemoignageImage" />
-                <p className='servicesWebName'>{"Nous analysons votre entreprise pour définir les solutions digitales parfaitement adaptées à vos besoins. "}</p>
-                <p className='servicesWebText'>{"Chaque projet est unique, c’est pourquoi nous vous proposons des options sur-mesure, en mettant l'accent sur ce qui vous correspond le mieux."}</p>
-                <p className='servicesWebTextAction'>{"Contactez-nous dès maintenant pour discuter de vos besoins et obtenir un devis personnalisé."}</p>
-                <Link to="/contact">
-                    <button className="submitButton">Obtenir un devis</button>
-                </Link>
-            </div>
         </div>
     )
 }
