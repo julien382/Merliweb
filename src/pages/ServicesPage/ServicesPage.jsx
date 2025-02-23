@@ -12,9 +12,18 @@ import drone from "../../assets/undraw/drone.svg";
 import socialDashboard from "../../assets/undraw/socialDashboard.svg";
 import color from "../../assets/undraw/color.svg";
 import ServiceWeb from '../../components/ServiceWeb/ServiceWeb';
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+
+    useEffect(() => {
+        const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <div className='servicesPage'>
             <Above 
@@ -45,6 +54,42 @@ const ServicesPage = () => {
                 </span>
             </div>
 
+
+            {isDesktop ? (
+                // 🖥️ Version PC (Texte à gauche, Image à droite)
+                <div className="servicesWebContact desktop">
+                    <div className="text">
+                        <h2>Construisez votre projet digital avec nous !</h2>
+                        <p className="servicesWebName">
+                            Nous analysons votre entreprise pour définir les solutions digitales parfaitement adaptées à vos besoins.
+                        </p>
+                        <p className="servicesWebText">
+                            <strong>Chaque projet est unique, c’est pourquoi nous vous proposons des options sur-mesure, en mettant l'accent sur ce qui vous correspond le mieux.</strong>
+                        </p>
+                        <p className="servicesWebTextAction">
+                            <em>Contactez-nous dès maintenant pour discuter de vos besoins et obtenir un devis personnalisé.</em>
+                        </p>
+                        <Link to="/contact">
+                            <button className="submitButton">OBTENIR UN DEVIS</button>
+                        </Link>
+                    </div>
+                    <div className="image">
+                        <img src={social} className="servicesWebImage" alt="Illustration projet digital" />
+                    </div>
+                </div>
+            ) : (
+                // 📱 Version Mobile (Tout centré, image au-dessus)
+                <div className='servicesWebContact'>
+                <h2>Construisez votre projet digital avec nous !</h2>
+                <img src={social} className="servicesWebImage" alt="mainTemoignageImage" />
+                <p className='servicesWebName'>{"Nous analysons votre entreprise pour définir les solutions digitales parfaitement adaptées à vos besoins. "}</p>
+                <p className='servicesWebText'>{"Chaque projet est unique, c’est pourquoi nous vous proposons des options sur-mesure, en mettant l'accent sur ce qui vous correspond le mieux."}</p>
+                <p className='servicesWebTextAction'>{"Contactez-nous dès maintenant pour discuter de vos besoins et obtenir un devis personnalisé."}</p>
+                <Link to="/contact">
+                    <button className="submitButton">Obtenir un devis</button>
+                </Link>
+            </div>
+            )}
             <div className='servicesWebContact'>
                 <h2>Construisez votre projet digital avec nous !</h2>
                 <img src={social} className="servicesWebImage" alt="mainTemoignageImage" />
