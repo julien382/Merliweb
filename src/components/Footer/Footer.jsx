@@ -61,7 +61,9 @@ const Footer = () => {
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
                     <p className='copyrightLink'>Site web créé par Julien Hermain</p>
                 </Link>
-                <p className='copyright'>Mentions légales</p>
+                <Link to="/mentionsLegales">
+                    <p className='copyrightLink'>Mentions légales</p>
+                </Link>
             </div>
 
         </footer>
