@@ -44,27 +44,6 @@ const projetsData = [
         title: "Henson",
         description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
         link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
-    },
-    {
-        images: [ohmylunch1, ohmylunch2, ohmylunch3], 
-        type: "Site de réservation",
-        title: "ohmylunch",
-        description: "Plateforme pour choisir et composer son menu en restaurant.",
-        link: "https://julien382.github.io/ohmylunch/"
-    },
-    {
-        images: [baratto1, baratto2, baratto3, baratto4],
-        type: "Site Vitrine",
-        title: "Baratto Precision",
-        description: "Site vitrine pour une entreprise d'impression 3D",
-        link: "https://barattoprecision.com/"
-    },
-    {
-        images: [reelHenson1, reelHenson2, reelHenson3],
-        type: "Reel",
-        title: "Henson",
-        description: "Réalisation d'un reel sur un événement d'attelage chez les Henson",
-        link: "https://www.instagram.com/reel/DF-AlQZNqy7/?igsh=Ym5lYzNnMW4xN2dm"
     }
 ];
 
