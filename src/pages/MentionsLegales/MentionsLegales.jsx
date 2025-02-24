@@ -65,7 +65,7 @@ const MentionsLegales = () => {
       <section>
         <h2>7. Droit applicable et tribunal compétent</h2>
         <p>
-          Les présentes mentions légales sont régies par le droit français. En cas de litige, le tribunal compétent est celui d'<strong>Arras</strong>.
+          {"Les présentes mentions légales sont régies par le droit français. En cas de litige, le tribunal compétent est celui d'"}<strong>Arras</strong>.
         </p>
       </section>
     </div>

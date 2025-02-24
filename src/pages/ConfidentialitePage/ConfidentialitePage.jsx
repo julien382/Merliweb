@@ -81,7 +81,7 @@ const ConfidentialitePage = () => {
       <section>
         <h2>8. Contact</h2>
         <p>
-          Si vous avez des questions concernant cette politique de confidentialité, n'hésitez pas à nous contacter par email à <strong>contact.merliweb@gmail.com</strong>.
+          {"Si vous avez des questions concernant cette politique de confidentialité, n'hésitez pas à nous contacter par email à "}<strong>contact.merliweb@gmail.com</strong>.
         </p>
       </section>
 
