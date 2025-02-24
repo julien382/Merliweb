@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import linkedin from "../../assets/reseaux/linkedin.svg";
-import facebook from "../../assets/reseaux/facebook.svg";
 import insta from "../../assets/reseaux/insta.svg";
 import tiktok from "../../assets/reseaux/tiktok.svg";
+import facebook from "../../assets/reseaux/facebook.svg";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -52,16 +52,16 @@ const ContactPage = () => {
 
             <div className='contactSocialMedia'>
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <img src={linkedin} className="logoSocialMedia" alt="arrow" />
+                    <img src={linkedin} className="logoSocialMedia" alt="linkedin" />
+                </Link>
+                <a href="https://www.instagram.com/merliweb/" target="_blank" rel="noopener noreferrer">
+                    <img src={insta} className="logoSocialMedia" alt="insta" />
+                </a>
+                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <img src={tiktok} className="logoSocialMedia" alt="tiktok" />
                 </Link>
                 <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <img src={facebook} className="logoSocialMedia" alt="arrow" />
-                </Link>
-                <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <img src={insta} className="logoSocialMedia" alt="arrow" />
-                </Link>
-                <Link to="https://www.linkedin.com/in/julien-hermain/">
-                    <img src={tiktok} className="logoSocialMedia" alt="arrow" />
+                    <img src={facebook} className="logoSocialMedia" alt="facebook" />
                 </Link>
             </div>
 
@@ -87,12 +87,7 @@ const ContactPage = () => {
                     </div>
                     <div className='containerContact'>
                         <p className='FooterNameType'>Contact</p>
-                        <Link to="https://www.linkedin.com/in/julien-hermain/">
-                            <p>Merliweb@*****.**</p>
-                        </Link>
-                        <Link to="https://www.linkedin.com/in/julien-hermain/">
-                            <p>06 ** ** ** **</p>
-                        </Link>
+                        <a href="mailto:contact.merliweb@gmail.com">contact.merliweb@gmail.com</a>
                     </div>
                 </div>
                 <div className="contentImageContact">

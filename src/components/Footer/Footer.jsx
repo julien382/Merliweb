@@ -15,12 +15,7 @@ const Footer = () => {
 
                 <div className='containerContact'>
                     <p className='FooterNameType'>Contact</p>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
-                        <p>Merliweb@*****.**</p>
-                    </Link>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
-                        <p>06 ** ** ** **</p>
-                    </Link>
+                    <a href="mailto:contact.merliweb@gmail.com">contact.merliweb@gmail.com</a>
                 </div>
 
                 <div className='containerMedia'>
@@ -28,14 +23,14 @@ const Footer = () => {
                     <Link to="https://www.linkedin.com/in/julien-hermain/">
                         <p>LinkedIn</p>
                     </Link>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
-                        <p>Facebook</p>
-                    </Link>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <a href="https://www.instagram.com/merliweb/" target="_blank" rel="noopener noreferrer">
                         <p>Instagram</p>
-                    </Link>
+                    </a>
                     <Link to="https://www.linkedin.com/in/julien-hermain/">
                         <p>TikTok</p>
+                    </Link>
+                    <Link to="https://www.linkedin.com/in/julien-hermain/">
+                        <p>Facebook</p>
                     </Link>
                 </div>
 
