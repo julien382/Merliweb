@@ -4,9 +4,9 @@ import multitasking from "../../assets/undraw/multitasking.svg";
 import designer from "../../assets/undraw/designer.svg";
 import shopping from "../../assets/undraw/shopping.svg";
 import device from "../../assets/undraw/device.svg";
-import react from "../../assets/undraw/react.svg";
+{/*import react from "../../assets/undraw/react.svg";
 import projections from "../../assets/undraw/projections.svg";
-import fastLoading from "../../assets/undraw/fastLoading.svg";
+import fastLoading from "../../assets/undraw/fastLoading.svg";*/}
 import social from "../../assets/undraw/social.svg";
 import drone from "../../assets/undraw/drone.svg";
 import socialDashboard from "../../assets/undraw/socialDashboard.svg";
