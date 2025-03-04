@@ -1,7 +1,6 @@
 import "./ContactPage.scss";
 import contact from "../../assets/undraw/contact.svg";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 import linkedin from "../../assets/reseaux/linkedin.svg";
 import insta from "../../assets/reseaux/insta.svg";
@@ -72,18 +71,10 @@ const ContactPage = () => {
                 <div className='contactContainerInfo'>
                     <div className='containerLocalisation'>
                         <p className='FooterNameType'>Localisation</p>
-                        <Link to="https://www.linkedin.com/in/julien-hermain/">
-                            <p>Hauts-De-France</p>
-                        </Link>
-                        <Link to="https://www.linkedin.com/in/julien-hermain/">
-                            <p>Merlimont</p>
-                        </Link>
-                        <Link to="https://www.linkedin.com/in/julien-hermain/">
-                            <p>Berck</p>
-                        </Link>
-                        <Link to="https://www.linkedin.com/in/julien-hermain/">
-                            <p>Le Touquet</p>
-                        </Link>
+                        <p>Hauts-De-France</p>
+                        <p>Merlimont</p>
+                        <p>Berck</p>
+                        <p>Le Touquet</p>
                     </div>
                     <div className='containerContact'>
                         <p className='FooterNameType'>Contact</p>

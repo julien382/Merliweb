@@ -36,18 +36,10 @@ const Footer = () => {
 
                 <div className='containerLocalisation'>
                     <p className='FooterNameType'>Localisation</p>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
-                        <p>Hauts-De-France</p>
-                    </Link>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
-                        <p>Merlimont</p>
-                    </Link>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
-                        <p>Berck</p>
-                    </Link>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
-                        <p>Le Touquet</p>
-                    </Link>
+                    <p>Hauts-De-France</p>
+                    <p>Merlimont</p>
+                    <p>Berck</p>
+                    <p>Le Touquet</p>
                 </div>
             </span>
 
