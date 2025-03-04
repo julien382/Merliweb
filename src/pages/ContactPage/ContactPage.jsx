@@ -51,18 +51,18 @@ const ContactPage = () => {
             </div>
 
             <div className='contactSocialMedia'>
-                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                <a href="https://www.linkedin.com/company/merliweb" target="_blank" rel="noopener noreferrer">
                     <img src={linkedin} className="logoSocialMedia" alt="linkedin" />
-                </Link>
+                </a>
                 <a href="https://www.instagram.com/merliweb/" target="_blank" rel="noopener noreferrer">
                     <img src={insta} className="logoSocialMedia" alt="insta" />
                 </a>
-                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                <a href="https://www.tiktok.com/@agence_merliweb" target="_blank" rel="noopener noreferrer">
                     <img src={tiktok} className="logoSocialMedia" alt="tiktok" />
-                </Link>
-                <Link to="https://www.linkedin.com/in/julien-hermain/">
+                </a>
+                <a href="https://www.facebook.com/people/Merliweb/61573613559840/" target="_blank" rel="noopener noreferrer">
                     <img src={facebook} className="logoSocialMedia" alt="facebook" />
-                </Link>
+                </a>
             </div>
 
         </div>

@@ -20,18 +20,18 @@ const Footer = () => {
 
                 <div className='containerMedia'>
                     <p className='FooterNameType'>Social Media</p>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <a href="https://www.linkedin.com/company/merliweb" target="_blank" rel="noopener noreferrer">
                         <p>LinkedIn</p>
-                    </Link>
+                    </a>
                     <a href="https://www.instagram.com/merliweb/" target="_blank" rel="noopener noreferrer">
                         <p>Instagram</p>
                     </a>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    <a href="https://www.tiktok.com/@agence_merliweb" target="_blank" rel="noopener noreferrer">
                         <p>TikTok</p>
-                    </Link>
-                    <Link to="https://www.linkedin.com/in/julien-hermain/">
+                    </a>
+                    <a href="https://www.facebook.com/people/Merliweb/61573613559840/" target="_blank" rel="noopener noreferrer">
                         <p>Facebook</p>
-                    </Link>
+                    </a>
                 </div>
 
                 <div className='containerLocalisation'>
