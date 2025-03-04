@@ -14,6 +14,8 @@ import baratto4 from "../../assets/projets/baratto/baratto4.png";
 import reelHenson1 from "../../assets/projets/reelHenson/reelHenson1.jpg";
 import reelHenson2 from "../../assets/projets/reelHenson/reelHenson2.jpg";
 import reelHenson3 from "../../assets/projets/reelHenson/reelHenson3.jpg";
+
+import moi from "../../assets/logo/moiForme.png";
 import building from "../../assets/undraw/building.svg";
 import programming from "../../assets/undraw/programming.svg";
 import studio from "../../assets/undraw/studio.svg";
@@ -123,7 +125,7 @@ const MainPage = () => {
                 <div className='webMainService'>
                     <div className='textMainService'>
                         <h2>Création de sites web sur-mesure</h2>
-                        <p>{"Nous concevons des sites web modernes, fonctionnels et responsive qui s'adaptent à tous vos besoins. Que vous ayez besoin d'un site vitrine, e-commerce, ou blog."}</p>
+                        <p>{"Nous concevons des sites web modernes, fonctionnels et responsive qui s'adaptent à tous vos besoins. Que vous ayez besoin d'un site vitrine ou e-commerce."}</p>
                         <div className='arrowMainService'>
                             <Link to="/services">
                                 <img src={arrowRight} className="arrow" alt="arrow" />
@@ -146,7 +148,7 @@ const MainPage = () => {
                 </div>
             </div>
 
-            <div className='mainTemoignages'>
+            {/*<div className='mainTemoignages'>
                 <p>Témoignages</p>
                 <h2>Ce que disent nos clients</h2>
                 <span className='contentMainTemoignage'>
@@ -166,7 +168,7 @@ const MainPage = () => {
                         <p className='mainTemoignageText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
                     </div>
                 </span>
-            </div>
+            </div>*/}
 
 
             {isDesktop ? (
@@ -187,12 +189,12 @@ const MainPage = () => {
                             <button className="submitButton">Prendre Contact</button>
                         </Link>
                     </div>
-                    <img src={programming} className="mainActionImage" alt="Illustration projet digital" />
+                    <img src={moi} className="mainActionImage" alt="Fondateur" />
                 </div>
             ) : (
                 <div className='mainActionContact'>
                     <h2>MerliWeb, votre partenaire pour une transformation digitale réussie</h2>
-                    <img src={programming} className="mainActionImage" alt="mainTemoignageImage" />
+                    <img src={moi} className="mainActionImage" alt="Fondateur" />
                     <p className='mainActionName'>{"Fondée par Julien Hermain, MerliWeb a été créée pour valoriser chaque entreprise sur le web."}</p>
                     <p className='mainActionText'>{"Notre mission ? Vous accompagner à chaque étape de votre transformation numérique : de la conception de sites web modernes et performants à la gestion de vos réseaux sociaux en passant par des stratégies de contenu impactantes."}</p>
                     <p className='mainActionTextAction'>{'"Prêt(e) à vous démarquer dans le monde du digital ? Faisons équipe !"'}</p>

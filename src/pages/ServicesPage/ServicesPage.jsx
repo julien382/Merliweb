@@ -36,7 +36,7 @@ const ServicesPage = () => {
                 <h2>Découvrez nos services Web</h2>
                 <span className='containerServiceWeb'>
                     <ServiceWeb img={designer} title={"Design UX/UI"} text={"Création d’interfaces modernes et ergonomiques"}/>
-                    <ServiceWeb img={shopping} title={"Développement de sites web"} text={"Sites vitrines, e-commerce, portfolios, blogs, Applications web"}/>
+                    <ServiceWeb img={shopping} title={"Développement de sites web"} text={"Sites vitrines, e-commerce, portfolios, Applications web"}/>
                     <ServiceWeb img={device} title={"Responsive Design"} text={"Sites adaptés à toutes les tailles d’écran (mobile, tablette, ordinateur)"}/>
                     {/*<ServiceWeb img={react} title={"Développement personnalisé"} text={"Nous codons votre site de A à Z en react. pour garantir performance et fluidité."}/>
                     <ServiceWeb img={projections} title={"Référencement SEO"} text={"Optimisation pour Google et les moteurs de recherche"}/>
