@@ -545,7 +545,7 @@
         transform: translateY(0); /* Position de départ */
     }
     50% {
-        transform: translateY(10px); /* Déplace la flèche de 10px vers le bas */
+        transform: translateY(-20px); /* Déplace la flèche de 10px vers le bas */
     }
     100% {
         transform: translateY(0); /* Retour à la position d'origine */
@@ -554,5 +554,5 @@
 
 /* Applique l'animation aux flèches */
 .arrow {
-    animation: arrowVerticalMove 1.5s ease-in-out infinite; /* Animation verticale infinie */
+    animation: arrowVerticalMove 2s ease-in-out infinite; /* Animation verticale infinie */
 }
