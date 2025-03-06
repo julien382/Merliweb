@@ -107,26 +107,4 @@
         animation-delay: 0.7s; /* Décalage d'animation pour le texte */
     }
 
-    .arrowMainService {
-        opacity: 0;
-        animation: fadeInUp 1s ease-out forwards;
-        animation-delay: 1s; /* Décalage d'animation pour la flèche */
-    }
-}
-
-/* Animation de la flèche vers le bas */
-@keyframes arrowVerticalMove {
-    0% {
-        transform: translateY(0); /* Position de départ */
-    }
-    50% {
-        transform: translateY(10px); /* Déplace la flèche vers le bas */
-    }
-    100% {
-        transform: translateY(0); /* Retour à la position de départ */
-    }
-}
-
-.arrowMainService {
-    animation: arrowVerticalMove 1.5s ease-in-out infinite; /* Flèche qui se déplace de haut en bas */
 }
