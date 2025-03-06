@@ -79,7 +79,14 @@ const ConfidentialitePage = () => {
       </section>
 
       <section>
-        <h2>8. Contact</h2>
+        <h2>{"8. Responsabilité en cas d'attaque frauduleuse"}</h2>
+        <p>
+          {"Bien que nous mettions en place des mesures de sécurité strictes pour protéger vos données personnelles, nous ne pouvons garantir la sécurité absolue de vos informations. En cas d'attaque frauduleuse, de violation de sécurité, ou d'accès non autorisé, nous ne pouvons être tenus responsables des dommages qui pourraient en découler, dans la mesure permise par la loi."}
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Contact</h2>
         <p>
           {"Si vous avez des questions concernant cette politique de confidentialité, n'hésitez pas à nous contacter par email à "}<strong>contact.merliweb@gmail.com</strong>.
         </p>
