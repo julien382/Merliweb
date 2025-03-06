@@ -128,7 +128,7 @@ const MainPage = () => {
                         <p>{"Nous concevons des sites web modernes, fonctionnels et responsive qui s'adaptent à tous vos besoins. Que vous ayez besoin d'un site vitrine ou e-commerce."}</p>
                         <div className='arrowMainService'>
                             <Link to="/services">
-                                <img src={arrowRight} className="arrow" alt="arrow" />
+                                <img src={arrowRight} className="arrowRight" alt="arrowRight" />
                             </Link>
                         </div>
                     </div>
@@ -140,7 +140,7 @@ const MainPage = () => {
                         <p>De la photo à la vidéo, en passant par le drone et la GoPro, nous créons du contenu sur mesure et gérons vos réseaux pour maximiser votre impact digital.</p>
                         <div className='arrowMainService'>
                             <Link to="/services">
-                                <img src={arrowRight} className="arrow" alt="arrow" />
+                                <img src={arrowRight} className="arrowRight" alt="arrowRight" />
                             </Link>
                         </div>
                     </div>

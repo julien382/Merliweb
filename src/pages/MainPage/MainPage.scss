@@ -518,3 +518,41 @@
     animation: fadeInUp 1s ease-out forwards; /* Animation d'images */
     animation-delay: 0.8s; /* Début après un délai */
 }
+
+
+/* Animation pour les flèches de type "arrowRight" */
+@keyframes arrowHorizontalMove {
+    0% {
+        transform: translateX(0); /* Position de départ */
+    }
+    50% {
+        transform: translateX(10px); /* Déplace la flèche de 10px vers la droite */
+    }
+    100% {
+        transform: translateX(0); /* Retour à la position d'origine */
+    }
+}
+
+/* Applique l'animation aux flèches */
+.arrowRight {
+    animation: arrowHorizontalMove 1.5s ease-in-out infinite; /* Animation horizontale infinie */
+}
+
+
+/* Animation pour les flèches qui bougent de haut en bas (arrowMainService) */
+@keyframes arrowVerticalMove {
+    0% {
+        transform: translateY(0); /* Position de départ */
+    }
+    50% {
+        transform: translateY(10px); /* Déplace la flèche de 10px vers le bas */
+    }
+    100% {
+        transform: translateY(0); /* Retour à la position d'origine */
+    }
+}
+
+/* Applique l'animation aux flèches */
+.arrow {
+    animation: arrowVerticalMove 1.5s ease-in-out infinite; /* Animation verticale infinie */
+}
