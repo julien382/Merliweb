@@ -479,7 +479,7 @@
 }
 
 /* Applique l'animation aux éléments */
-.mainAbove, .mainDescription, .mainService, .mainProjets, .mainActionContact {
+.mainAbove, .mainDescription, .mainService, .mainActionContact {
     opacity: 0;
     animation: fadeInUp 0.8s ease-out forwards; /* Animation sur 0.8s */
 }
