@@ -117,7 +117,7 @@ const MainPage = () => {
                 <p>Merliweb vous accompagne dans la création de votre site web et la gestion de votre communication digitale.
                 Nous vous aidons à optimiser votre visibilité, à capter l’attention de votre audience et à générer des conversions grâce à des solutions modernes et performantes.</p>
                 <div className='arrowMainService'>
-                    <img src={arrowBottom} className="arrow" alt="arrow" />    
+                    <img src={arrowBottom} alt="arrow" />    
                 </div>
             </div>
 
