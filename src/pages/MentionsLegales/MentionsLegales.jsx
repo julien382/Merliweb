@@ -12,7 +12,7 @@ const MentionsLegales = () => {
         <p><strong>Entreprise :</strong> Micro-entreprise Merliweb</p>
         <p><strong>Activités :</strong> Création de sites web et de contenu vidéo</p>
         <p><strong>Siège social :</strong> 5 Rue des Ayettes 62124 Bus</p>
-        <p><strong>SIRET :</strong> [Ton numéro SIRET]</p>
+        <p><strong>SIRET :</strong> 94162675600014</p>
         <p><strong>E-mail :</strong> contact.merliweb@gmail.com</p>
         <p><strong>Directeur de publication :</strong> Hermain Julien</p>
       </section>
