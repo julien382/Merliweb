@@ -19,6 +19,8 @@ import cross from "../../assets/cross.svg";
 import chevronLeft from "../../assets/chevronLeft.svg";
 import chevronRight from "../../assets/chevronRight.svg";
 
+import { Helmet } from 'react-helmet';
+
 const projetsData = [
     {
         images: [ohmylunch1, ohmylunch2, ohmylunch3], 
@@ -90,6 +92,26 @@ const ProjetsPage = () => {
 
     return (
         <div className='projetsPage'>
+            <Helmet>
+                <title>Nos Projets - Merliweb</title>
+                <meta
+                name="description"
+                content="Explorez les projets réalisés par Merliweb : développement de sites web, solutions sur mesure pour chaque client, et une approche unique de la communication digitale."
+                />
+                <meta
+                name="keywords"
+                content="projets web, développement de sites, créations sur mesure, solutions digitales, projets réussis, Merliweb"
+                />
+                <meta property="og:title" content="Nos Projets - Merliweb" />
+                <meta
+                property="og:description"
+                content="Explorez les projets réalisés par Merliweb : développement de sites web, solutions sur mesure pour chaque client, et une approche unique de la communication digitale."
+                />
+                <meta property="og:image" content="/assets/logo/Merliweb.svg" />
+                <meta property="og:url" content="https://www.merliweb.com/projets" />
+                <meta property="og:type" content="website" />
+            </Helmet>
+
             <Above 
                 img={asset} 
                 title={"Nos projets"} 

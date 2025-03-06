@@ -15,6 +15,8 @@ import ServiceWeb from '../../components/ServiceWeb/ServiceWeb';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { Helmet } from 'react-helmet';
+
 const ServicesPage = () => {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
 
@@ -26,6 +28,25 @@ const ServicesPage = () => {
 
     return (
         <div className='servicesPage'>
+            <Helmet>
+                <title>Services - Merliweb</title>
+                <meta
+                name="description"
+                content="Découvrez les services de Merliweb : développement web, création de sites sur mesure, et solutions digitales adaptées à vos besoins."
+                />
+                <meta
+                name="keywords"
+                content="services web, développement web, création de site, solutions digitales, services personnalisés, Merliweb"
+                />
+                <meta property="og:title" content="Services - Merliweb" />
+                <meta
+                property="og:description"
+                content="Découvrez les services de Merliweb : développement web, création de sites sur mesure, et solutions digitales adaptées à vos besoins."
+                />
+                <meta property="og:image" content="/assets/logo/Merliweb.svg" />
+                <meta property="og:url" content="https://www.merliweb.com/services" />
+                <meta property="og:type" content="website" />
+            </Helmet>
             <Above 
                 img={multitasking} 
                 title={"Nos Services"} 

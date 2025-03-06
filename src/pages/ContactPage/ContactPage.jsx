@@ -7,6 +7,8 @@ import insta from "../../assets/reseaux/insta.svg";
 import tiktok from "../../assets/reseaux/tiktok.svg";
 import facebook from "../../assets/reseaux/facebook.svg";
 
+import { Helmet } from 'react-helmet';
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -63,6 +65,26 @@ const ContactPage = () => {
 
   return (
     <div className="contactPage">
+
+      <Helmet>
+        <title>Contact - Merliweb</title>
+        <meta
+          name="description"
+          content="Contactez Merliweb pour discuter de vos besoins en développement web et solutions digitales. Nous sommes à votre écoute."
+        />
+        <meta
+          name="keywords"
+          content="contact, Merliweb, solutions web, création de site, développement digital"
+        />
+        <meta property="og:title" content="Contact - Merliweb" />
+        <meta
+          property="og:description"
+          content="Contactez Merliweb pour discuter de vos besoins en développement web et solutions digitales. Nous sommes à votre écoute."
+        />
+        <meta property="og:image" content="/assets/logo/Merliweb.svg" />
+        <meta property="og:url" content="https://www.merliweb.com/contact" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="contactContainerTitleSocial">
         <div className="contactPageTitle">
           <h1>Contactez-</h1>
