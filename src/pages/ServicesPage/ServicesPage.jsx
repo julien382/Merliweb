@@ -70,7 +70,7 @@ const ServicesPage = () => {
                 <h2>Découvrez nos services de communication</h2>
                 <span className='containerServiceWeb'>
                     <ServiceWeb img={drone} title={"Production Visuelle"} text={"Vidéos, photos, prises de vue aériennes avec drone, création de visuels professionnels."}/>
-                    <ServiceWeb img={socialDashboard} title={"Stratégie & Gestion Digitale"} text={"Gestion des réseaux sociaux, création de contenu, campagnes publicitaires."}/>
+                    <ServiceWeb img={socialDashboard} title={"Stratégie & Gestion Digitale"} text={"Gestion des réseaux sociaux, création de contenu."}/>
                     <ServiceWeb img={color} title={"Identité Visuelle & Branding"} text={"Conception de logos, chartes graphiques, création de supports de communication."}/>
                 </span>
             </div>
