@@ -8,7 +8,7 @@ const ActionContact = () => {
             <img src={contact} className="actionContactImage" alt="Merliweb Logo" />
             <span className='contentTextActionContact'>
                 <h2>Prêt à faire briller votre présence en ligne ?</h2>
-                <p className='actionContactText'>{'Chez MerliWeb, nous sommes impatients de collaborer avec vous pour donner vie à vos projets numériques.'}</p>
+                <p className='actionContactText'>{'Chez Merliweb, nous sommes impatients de collaborer avec vous pour donner vie à vos projets numériques.'}</p>
                 <Link to="/contact">
                     <button className="submitButton">Prendre Contact</button>
                 </Link>
