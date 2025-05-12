@@ -193,9 +193,9 @@ const MainPage = () => {
                 </div>
             ) : (
                 <div className='mainActionContact'>
-                    <h2>MerliWeb, votre partenaire pour une transformation digitale réussie</h2>
+                    <h2>Merliweb, votre partenaire pour une transformation digitale réussie</h2>
                     <img src={moi} className="mainActionImage" alt="Fondateur" />
-                    <p className='mainActionName'>{"Fondée par Julien Hermain, MerliWeb a été créée pour valoriser chaque entreprise sur le web."}</p>
+                    <p className='mainActionName'>{"Fondée par Julien Hermain, Merliweb a été créée pour valoriser chaque entreprise sur le web."}</p>
                     <p className='mainActionText'>{"Notre mission ? Vous accompagner à chaque étape de votre transformation numérique : de la conception de sites web modernes et performants à la gestion de vos réseaux sociaux en passant par des stratégies de contenu impactantes."}</p>
                     <p className='mainActionTextAction'>{'"Prêt(e) à vous démarquer dans le monde du digital ? Faisons équipe !"'}</p>
                     <Link to="/contact">
