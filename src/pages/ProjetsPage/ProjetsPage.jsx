@@ -4,6 +4,9 @@ import Above from '../../components/Above/Above';
 import ActionContact from '../../components/ActionContact/ActionContact';
 import Projet from '../../components/Projet/Projet';
 
+import gtrsolutions1 from "../../assets/projets/gtrsolutions/gtrsolutions1.png";
+import gtrsolutions2 from "../../assets/projets/gtrsolutions/gtrsolutions2.png";
+import gtrsolutions3 from "../../assets/projets/gtrsolutions/gtrsolutions3.png";
 import ohmylunch1 from "../../assets/projets/ohmylunch/ohmylunch1.png";
 import ohmylunch2 from "../../assets/projets/ohmylunch/ohmylunch2.png";
 import ohmylunch3 from "../../assets/projets/ohmylunch/ohmylunch3.png";
@@ -22,6 +25,13 @@ import chevronRight from "../../assets/chevronRight.svg";
 import { Helmet } from 'react-helmet';
 
 const projetsData = [
+    {
+        images: [gtrsolutions1, gtrsolutions2, gtrsolutions3], 
+        type: "Site vitrine",
+        title: "Gtr Solutions",
+        description: "Site vitrine pour une entreprise Télécom.",
+        link: "https://gtrsolutions.fr/"
+    },
     {
         images: [ohmylunch1, ohmylunch2, ohmylunch3], 
         type: "Site de réservation",

@@ -175,9 +175,9 @@ const MainPage = () => {
                 // 🖥️ Version PC (Texte à gauche, Image à droite)
                 <div className="mainActionContact desktop">
                     <div className="text">
-                        <h2>MerliWeb, votre partenaire pour une transformation digitale réussie</h2>
+                        <h2>Merliweb, votre partenaire pour une transformation digitale réussie</h2>
                         <p className="mainActionName">
-                            {"Fondée par Julien Hermain, MerliWeb a été créée pour valoriser chaque entreprise sur le web."}
+                            {"Fondée par Julien Hermain, Merliweb a été créée pour valoriser chaque entreprise sur le web."}
                         </p>
                         <p className="mainActionText">
                             {"Notre mission ? Vous accompagner à chaque étape de votre transformation numérique : de la conception de sites web modernes et performants à la gestion de vos réseaux sociaux en passant par des stratégies de contenu impactantes."}
