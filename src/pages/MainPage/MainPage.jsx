@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import ActionContact from '../../components/ActionContact/ActionContact';
 import Projet from '../../components/Projet/Projet';
 
-import ohmylunch1 from "../../assets/projets/ohmylunch/ohmylunch1.png";
-import ohmylunch2 from "../../assets/projets/ohmylunch/ohmylunch2.png";
-import ohmylunch3 from "../../assets/projets/ohmylunch/ohmylunch3.png";
+import gtrsolutions1 from "../../assets/projets/gtrsolutions/gtrsolutions1.png";
+import gtrsolutions2 from "../../assets/projets/gtrsolutions/gtrsolutions2.png";
+import gtrsolutions3 from "../../assets/projets/gtrsolutions/gtrsolutions3.png";
 import baratto1 from "../../assets/projets/baratto/baratto1.png";
 import baratto2 from "../../assets/projets/baratto/baratto2.png";
 import baratto3 from "../../assets/projets/baratto/baratto3.png";
@@ -27,11 +27,11 @@ import chevronRight from "../../assets/chevronRight.svg";
 
 const projetsData = [
     {
-        images: [ohmylunch1, ohmylunch2, ohmylunch3], 
-        type: "Site de réservation",
-        title: "ohmylunch",
-        description: "Plateforme pour choisir et composer son menu en restaurant.",
-        link: "https://julien382.github.io/ohmylunch/"
+        images: [gtrsolutions1, gtrsolutions2, gtrsolutions3], 
+        type: "Site vitrine",
+        title: "Gtr Solutions",
+        description: "Site vitrine pour une entreprise Télécom.",
+        link: "https://gtrsolutions.fr/"
     },
     {
         images: [baratto1, baratto2, baratto3, baratto4],
